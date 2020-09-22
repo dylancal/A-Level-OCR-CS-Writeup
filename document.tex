@@ -654,15 +654,49 @@ An important thing to note is that I needed to add a file with the name \texttt{
 	\includegraphics[width=4in]{raspberryPiBoot.png}
 	\caption{The login screen for the Pi terminal, shown on the PuTTY terminal}\label{fig_raspberryPiBoot}
 \end{figure}
-This section covers criterion 1 of $\alpha$ as we now have an SSH terminal (and therefore access to the Raspberry Pi). The next step is to enable the VNC server (if not enabled by default). The reason that I have not only enabled the VNC server is so in the case of an error with VNC, we can always (attempt) to fallback to SSH which should allow us to fix the VNC server.
+This section covers Criterion 1($\alpha$) as we now have an SSH terminal (and therefore access to the Raspberry Pi). The next step  is to enable the VNC server (if not enabled by default). The reason that I have not only enabled the VNC server is so in the case of an error with VNC, we can always (attempt) to fallback to SSH which should allow us to fix the VNC server. \\\\
+For Criterion 2($\alpha$), we must enable the VNC server if it is not enabled already. We can verify if it is enabled by opening VNC viewer on the desktop and attempting to connect to the IP address of the Pi with the default user credentials. Doing this results in the desktop screen of the Pi being shown -- voilà! The VNC server is enabled by default so we do not need to worry about enabling it, if anything happens, we can always revert back to using SSH in a worst case scenario. The desktop is shown on Figure \ref{fig_vncDesktop} and by checking in the display settings, we can verify as per Criterion 2($\alpha$) that the resolution is at least 768p. Importantly, there is no perceivable desktop stutter apart from when performing intense operations on the CPU; a result of heavy mathematical operations being performed by the arithmetic logic unit and these operations taking most of the CPU time.\\\\
+The next stage of preparing the device will be setting up the NoIR camera for use with the Pi so that we can then use the video feed for later parts of the development. To do this, the Pi is turned off before connecting the ribbon cable from the camera to the appropriate connector as described previously in Figure \ref{fig_raspberryPi}. The Pi can then be powered on and the Pi settings command, \texttt{raspi-config}, can be used in the terminal to access the list of settings available for us to tweak on our Pi. The settings for the camera can then be toggled in order to enable the camera add-in module.\\
+Later, to verify that the camera works, we can use the \texttt{raspistill} command to take a still photo with the camera which is saved in the current working directory of the terminal where the command was called. If there is a photo that resembles what the camera should see then we can move on with this. As per criterion 3($ \alpha $), the only thing that needs to happen at this stage is that the command takes and saves a photo, and the photo is recognisable from the current position of the camera.\\\\
+For Criterion 4($ \alpha $), we must change the swap size on the Pi. This is due to the fact that the default swapsize is quite low. As a result, memory intensive tasks may cause the system to run out of memory and then hang or crash -- this is a scenario that must be avoided. To combat this, the swapsize can be changed with the following sequence of commands;
+\begin{lstlisting}
+sudo dphys-swapfile swapoff		# turns the swapfile off
+sudo nano /etc/dphys-swapfile	# this is used to open and edit the file
+sudo dphys-swapfile swapon		# turns the swapfile on
+free -m							# returns an output resembling the below
 
-
-
-
-
-
-
-
+----------------------------------------------------------------------------
+					total	used	free	shared	buffers	cached
+Mem:          		435     56		379		0		3       16
+-/+ buffers/cache: 	35      399		----	----	----	----
+Swap:         		1023    0     	1023	----	----	----
+----------------------------------------------------------------------------
+\end{lstlisting}
+After we open up the file with \texttt{nano}, we must change the line \texttt{CONF\_SWAPSIZE=100} to \texttt{CONF\_SWAPSIZE=1024}
+The \texttt{free -m} command gives us a rundown of memory usage on our system. If the total swapdisk size is what we set the new size as, then the swapdisk size change worked as needed in Criterion 4($ \alpha $)\\\\
+Criterion 5($ \alpha $) governs what software we need on our system. Most importantly for the solution, we need a relatively new version of Python 3.x.x which is also compatible with OpenCV. The latest version of Python on the website is listed as XXXXXXXXXXX and we need at least XXXXXXXXXXXXX for OpenCV to work. \\
+As a precautionary measure, I ran the following commands to ensure everything else on the system was up to date. These commands should also update Python as it is pre-installed on the system.
+\begin{lstlisting}
+sudo apt-get update				# to update the package information from registered sources
+sudo apt-get upgrade			# to upgrade packages to their new release (if it exists)
+\end{lstlisting}
+This ties in nicely with Criterion 5($ \alpha $) as to move on, we now need to install OpenCV. This can be done very easily  with the command \texttt{pip install opencv-python}. This installs the OpenCV package into our installation of Python automatically without the need to compile everything.\\\\
+With the device set-up, we can now move on to testing that is is set up correctly. We can do this by comparing the expected outcome of the corresponding testing harness table made previously, to the actual results of testing.
+\begin{table}[H]
+	\centering
+	\rowcolors{3}{tableShade}{white}
+	\begin{tabularx}{\textwidth}{lXXXl}
+		\textbf{Test} & \textbf{Test Data}                                                                               & \textbf{Expected Outcome}                                                 & \textbf{Actual Outcome}                                                                       & \textbf{Passed?} \\ \midrule
+		1             & Adding power and watching for the LED lights on the board to indicate a successful boot sequence & The Pi should boot into the OS on the SD card                             & The Pi boots into the OS loaded on to the SD card. This is verifiable by SSH in the next test & YES              \\
+		2             & Attempting to connect to the Pi via SSH with its IP address and default username                 & We should get a terminal on our desktop which allows us to control the Pi & We are given a terminal and are free do perform any commands as you would on the Pi itself    & YES              \\
+		3             &                                                                                                  &                                                                           &                                                                                               &                  \\
+		5             &                                                                                                  &                                                                           &                                                                                               &                  \\
+		6             &                                                                                                  &                                                                           &                                                                                               &                  \\
+		7             &                                                                                                  &                                                                           &                                                                                               &                  \\ \bottomrule
+	\end{tabularx}
+	\caption{A table showing the tests performed on the solution, with justification}
+	\label{tab_testingDesignSolution}
+\end{table}
 
 
 
