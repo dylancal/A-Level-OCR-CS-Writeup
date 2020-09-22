@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Stakeholders}{2}{section.2}%
+\contentsline {section}{\numberline {3}Research into similar problems and their solutions}{2}{section.3}%
+\contentsline {section}{\numberline {4}Essential features necessary for a computational solution}{3}{section.4}%
+\contentsline {section}{\numberline {5}Limitations of my solution}{3}{section.5}%
+\contentsline {section}{\numberline {6}Minimum Required Hardware and Software configuration}{4}{section.6}%
+\contentsline {section}{\numberline {7}Success Criteria}{5}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Success Criteria for the device setup}{5}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Success Criteria to ensure the enforcement of chosen programming constructs}{5}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Success Criteria for the solution}{6}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Design of the solution}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Decomposition of the problem and application to the solution}{9}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}The non-web areas of the solution}{9}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}The web side of the solution}{13}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}Identifying key variables, objects, and data structures}{15}{subsubsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.2}Describing the testing methodology}{16}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Testing the setup of the device}{16}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Testing the solution}{16}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Final Testing}{17}{subsubsection.8.2.3}%
+\contentsline {section}{\numberline {9}The Iterative Development Process}{18}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{19}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Setting up the working environment}{21}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Evaluation}{22}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Testing the product against our final criteria}{23}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Sucess of the solution}{24}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Describing the final product}{25}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Problems I encountered and what I would do in the future}{26}{subsection.10.4}%
+\contentsline {section}{Bibliography}{27}{subsection.10.4}%

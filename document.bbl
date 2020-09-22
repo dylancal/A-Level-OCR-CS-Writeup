@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{openCvAbout}
+OpenCV.
+\newblock {\em About Us}.
+\newblock \url{https://opencv.org/about/} Accessed on 3 September 2020.
+
+\bibitem{haarImage}
+Will Berger.
+\newblock {\em Deep Learning Haar Cascades Explained}.
+\newblock \url{http://www.willberger.org/cascade-haar-explained/} Accessed on 3
+  September 2020.
+
+\bibitem{haarInformation}
+OpenCV.
+\newblock {\em OpenCV Documentation; Cascade Classifiers}.
+\newblock \url
+  {https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html}
+  Accessed on 4 September 2020.
+
+\bibitem{lbphDiagram}
+Wang Li and Ali~Akbar Siddique.
+\newblock {\em Facial recognition system using LBPH face recognizer for
+  anti-theft and surveillance application based on drone technology}.
+\newblock \url{https://journals.sagepub.com/doi/full/10.1177/0020294020932344}
+  Accessed on 4 September 2020.
+
+\bibitem{colourBlindness}
+National~Eye Institute.
+\newblock {\em Types of colour blindness}.
+\newblock
+  \url{https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness}
+  Accessed on 17 September 2020.
+
+\bibitem{Rufus}
+Pete Batard.
+\newblock {\em Rufus}.
+\newblock \url{https://rufus.ie/} Accessed on 21 September 2020.
+
+\bibitem{raspberryPi}
+Raspberry~Pi Foundation.
+\newblock {\em Raspberry Pi Images}.
+\newblock \url{https://www.raspberrypi.org/downloads/} Accessed on 21 September
+  2020.
+
+\end{thebibliography}
