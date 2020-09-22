@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  22 SEP 2020 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  22 SEP 2020 13:47
 entering extended mode
 **./document.tex
 (document.tex
@@ -737,144 +737,149 @@ Overfull \hbox (25.00003pt too wide) in paragraph at lines 143--148
 [] 
  []
 
-[5] [6] [7] [8]
-<./figs/flowOverview.png, id=239, 383.93437pt x 322.95656pt>
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
+
+ []
+
+[8]
+<./figs/flowOverview.png, id=240, 383.93437pt x 322.95656pt>
 File: ./figs/flowOverview.png Graphic file (type png)
 <use ./figs/flowOverview.png>
-Package pdftex.def Info: ./figs/flowOverview.png  used on input line 283.
+Package pdftex.def Info: ./figs/flowOverview.png  used on input line 284.
 (pdftex.def)             Requested size: 383.93343pt x 322.95576pt.
-<./figs/flowCameraworking.png, id=240, 278.54062pt x 198.7425pt>
+<./figs/flowCameraworking.png, id=241, 278.54062pt x 198.7425pt>
 File: ./figs/flowCameraworking.png Graphic file (type png)
 <use ./figs/flowCameraworking.png>
-Package pdftex.def Info: ./figs/flowCameraworking.png  used on input line 300.
+Package pdftex.def Info: ./figs/flowCameraworking.png  used on input line 301.
 (pdftex.def)             Requested size: 278.53993pt x 198.742pt.
  [9 <./figs/flowOverview.png>]
-<./figs/haarCascades.png, id=257, 166.37157pt x 140.77594pt>
+<./figs/haarCascades.png, id=258, 166.37157pt x 140.77594pt>
 File: ./figs/haarCascades.png Graphic file (type png)
 <use ./figs/haarCascades.png>
-Package pdftex.def Info: ./figs/haarCascades.png  used on input line 309.
+Package pdftex.def Info: ./figs/haarCascades.png  used on input line 310.
 (pdftex.def)             Requested size: 166.37114pt x 140.77557pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--311
+Underfull \hbox (badness 10000) in paragraph at lines 304--312
 
  []
 
 [10 <./figs/flowCameraworking.png> <./figs/haarCascades.png>]
-<./figs/lbphRecognition.png, id=273, 303.38344pt x 105.39375pt>
+<./figs/lbphRecognition.png, id=274, 303.38344pt x 105.39375pt>
 File: ./figs/lbphRecognition.png Graphic file (type png)
 <use ./figs/lbphRecognition.png>
-Package pdftex.def Info: ./figs/lbphRecognition.png  used on input line 349.
+Package pdftex.def Info: ./figs/lbphRecognition.png  used on input line 350.
 (pdftex.def)             Requested size: 303.38269pt x 105.39348pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--351
+Underfull \hbox (badness 10000) in paragraph at lines 346--352
 
  []
 
 [11 <./figs/lbphRecognition.png>]
-<./figs/facialRecognitionIdentify.png, id=309, 1408.51219pt x 773.89125pt>
+<./figs/facialRecognitionIdentify.png, id=310, 1408.51219pt x 773.89125pt>
 File: ./figs/facialRecognitionIdentify.png Graphic file (type png)
 <use ./figs/facialRecognitionIdentify.png>
 Package pdftex.def Info: ./figs/facialRecognitionIdentify.png  used on input li
-ne 394.
+ne 395.
 (pdftex.def)             Requested size: 339.66878pt x 186.62334pt.
  [12 <./figs/facialRecognitionIdentify.png>]
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-422.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 422.
+423.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 423.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 422.
+(Font)              for symbol `textbraceleft' on input line 423.
 
-<./figs/webserverWhole.png, id=340, 998.22937pt x 636.87938pt>
+<./figs/webserverWhole.png, id=341, 998.22937pt x 636.87938pt>
 File: ./figs/webserverWhole.png Graphic file (type png)
 <use ./figs/webserverWhole.png>
-Package pdftex.def Info: ./figs/webserverWhole.png  used on input line 429.
+Package pdftex.def Info: ./figs/webserverWhole.png  used on input line 430.
 (pdftex.def)             Requested size: 346.89621pt x 221.31737pt.
-<./figs/webserverExtended.png, id=342, 986.18437pt x 513.41812pt>
+<./figs/webserverExtended.png, id=343, 986.18437pt x 513.41812pt>
 File: ./figs/webserverExtended.png Graphic file (type png)
 <use ./figs/webserverExtended.png>
-Package pdftex.def Info: ./figs/webserverExtended.png  used on input line 436.
+Package pdftex.def Info: ./figs/webserverExtended.png  used on input line 437.
 (pdftex.def)             Requested size: 361.34999pt x 188.1207pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 432--438
+Underfull \hbox (badness 10000) in paragraph at lines 433--439
 
  []
 
 [13 <./figs/webserverWhole.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--454
+Underfull \hbox (badness 10000) in paragraph at lines 453--455
 
  []
 
 [14 <./figs/webserverExtended.png>] [15]
-Underfull \hbox (badness 2790) in paragraph at lines 506--506
+Underfull \hbox (badness 2790) in paragraph at lines 507--507
 []|\OT1/cmr/m/n/10 Ensure that the Pi re-ceives
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 506--506
+Underfull \hbox (badness 1297) in paragraph at lines 507--507
 []|\OT1/cmr/m/n/10 We will be ac-cess-ing the Pi
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 506--506
+Underfull \hbox (badness 2865) in paragraph at lines 507--507
 []|\OT1/cmr/m/n/10 Ensure that OpenCV is in-
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 506--506
+Underfull \hbox (badness 3525) in paragraph at lines 507--507
 \OT1/cmr/m/n/10 OpenCV, we must there-fore
  []
 
 [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 589--594
+Underfull \hbox (badness 10000) in paragraph at lines 590--595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--594
+Underfull \hbox (badness 10000) in paragraph at lines 590--595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--594
+Underfull \hbox (badness 10000) in paragraph at lines 590--595
 
  []
 
-<./figs/flowTesting.png, id=408, 862.72313pt x 450.18187pt>
+<./figs/flowTesting.png, id=409, 862.72313pt x 450.18187pt>
 File: ./figs/flowTesting.png Graphic file (type png)
 <use ./figs/flowTesting.png>
-Package pdftex.def Info: ./figs/flowTesting.png  used on input line 603.
+Package pdftex.def Info: ./figs/flowTesting.png  used on input line 604.
 (pdftex.def)             Requested size: 433.62pt x 226.26501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--605
+Underfull \hbox (badness 10000) in paragraph at lines 601--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--605
+Underfull \hbox (badness 10000) in paragraph at lines 601--606
 
  []
 
 [18 <./figs/flowTesting.png>]
-<./figs/raspberryPi.jpg, id=421, 1003.75pt x 679.53876pt>
+<./figs/raspberryPi.jpg, id=422, 1003.75pt x 679.53876pt>
 File: ./figs/raspberryPi.jpg Graphic file (type jpg)
 <use ./figs/raspberryPi.jpg>
-Package pdftex.def Info: ./figs/raspberryPi.jpg  used on input line 623.
+Package pdftex.def Info: ./figs/raspberryPi.jpg  used on input line 624.
 (pdftex.def)             Requested size: 289.07999pt x 195.70287pt.
-<./figs/raspberryPiBoot.png, id=427, 663.47874pt x 419.5675pt>
+<./figs/raspberryPiBoot.png, id=428, 663.47874pt x 419.5675pt>
 File: ./figs/raspberryPiBoot.png Graphic file (type png)
 <use ./figs/raspberryPiBoot.png>
-Package pdftex.def Info: ./figs/raspberryPiBoot.png  used on input line 653.
+Package pdftex.def Info: ./figs/raspberryPiBoot.png  used on input line 654.
 (pdftex.def)             Requested size: 289.07999pt x 182.80487pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--655
+Underfull \hbox (badness 10000) in paragraph at lines 648--656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--655
+Underfull \hbox (badness 10000) in paragraph at lines 648--656
 
  []
 
@@ -887,19 +892,19 @@ ov / learn-[]about-[]eye-[]health /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 748.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 749.
  [27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 748.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 749.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 748.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 748.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 749.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 749.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: C8BFF756DEFD98B9085A402B0E1B158E;2246.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 748.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 749.
  ) 
 Here is how much of TeX's memory you used:
  14801 strings out of 481199
@@ -915,21 +920,22 @@ c/amsfonts/cm/cmbx10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vi19DCall/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vi19DCall/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/vi19DCa
-ll/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
-sers/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr8.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/vi19DCall/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vi19DCall/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/vi19D
-Call/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C
+ll/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr6.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr7.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vi19DCall/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/vi19DCall/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vi19
+DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C
 :/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmtt10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmtt8.pfb>
-Output written on document.pdf (28 pages, 1110235 bytes).
+cmti10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmtt10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on document.pdf (28 pages, 1119173 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
+ 588 PDF objects out of 1000 (max. 8388607)
  224 named destinations out of 1000 (max. 500000)
  275 words of extra memory for PDF output out of 10000 (max. 10000000)
 
