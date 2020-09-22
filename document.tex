@@ -681,17 +681,17 @@ sudo apt-get update				# to update the package information from registered sourc
 sudo apt-get upgrade			# to upgrade packages to their new release (if it exists)
 \end{lstlisting}
 This ties in nicely with Criterion 5($ \alpha $) as to move on, we now need to install OpenCV. This can be done very easily  with the command \texttt{pip install opencv-python}. This installs the OpenCV package into our installation of Python automatically without the need to compile everything.\\\\
-With the device set-up, we can now move on to testing that is is set up correctly. We can do this by comparing the expected outcome of the corresponding testing harness table made previously, to the actual results of testing.
+With the device set-up, we can now move on to testing that is, infact, set-up correctly. We can do this by comparing the expected outcome of the corresponding testing harness table made previously, to the actual results of testing.
 \begin{table}[H]
 	\centering
 	\rowcolors{3}{tableShade}{white}
 	\begin{tabularx}{\textwidth}{lXXXl}
 		\textbf{Test} & \textbf{Test Data}                                                                               & \textbf{Expected Outcome}                                                 & \textbf{Actual Outcome}                                                                       & \textbf{Passed?} \\ \midrule
 		1             & Adding power and watching for the LED lights on the board to indicate a successful boot sequence & The Pi should boot into the OS on the SD card                             & The Pi boots into the OS loaded on to the SD card. This is verifiable by SSH in the next test & YES              \\
-		2             & Attempting to connect to the Pi via SSH with its IP address and default username                 & We should get a terminal on our desktop which allows us to control the Pi & We are given a terminal and are free do perform any commands as you would on the Pi itself    & YES              \\
-		3             &                                                                                                  &                                                                           &                                                                                               &                  \\
-		5             &                                                                                                  &                                                                           &                                                                                               &                  \\
-		6             &                                                                                                  &                                                                           &                                                                                               &                  \\
+		2             & Attempting to connect to the Pi via SSH with its IP address and default credentials            & We should get a terminal on our desktop which allows us to control the Pi & We are given a terminal and are free do perform any commands as you would on the Pi itself    & YES              \\
+		3             & Attempt to connect to VNC server via IP address and default credentials & The VNC sever works correctly and we can connect from our PC, showing a desktop environment& The client connects via VNC and we are successful in having a desktop environment & YES \\
+		5             & & & & \\
+		6             & & & & \\
 		7             &                                                                                                  &                                                                           &                                                                                               &                  \\ \bottomrule
 	\end{tabularx}
 	\caption{A table showing the tests performed on the solution, with justification}
