@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.12)  22 SEP 2020 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.12)  22 SEP 2020 19:57
 entering extended mode
 **./document.tex
 (document.tex
@@ -992,10 +992,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 784.
  ) 
 Here is how much of TeX's memory you used:
- 14764 strings out of 481212
- 261581 string characters out of 2901249
+ 14765 strings out of 481212
+ 261605 string characters out of 2901249
  584835 words of memory out of 3000000
- 29873 multiletter control sequences out of 15000+200000
+ 29874 multiletter control sequences out of 15000+200000
  546568 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,16n,46p,3329b,1061s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1019,7 +1019,7 @@ ghan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:
 s/cm/cmti10.pfb><C:/Users/Dylan Callaghan/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Dylan Callaghan/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on document.pdf (29 pages, 1130655 bytes).
+Output written on document.pdf (29 pages, 1130778 bytes).
 PDF statistics:
  612 PDF objects out of 1000 (max. 8388607)
  241 named destinations out of 1000 (max. 500000)
