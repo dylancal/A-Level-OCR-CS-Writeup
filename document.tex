@@ -113,7 +113,16 @@ Finally, the use of a camera and the raw computational power required to record 
 \textbf{CPU} -- 2 Core 1GHz CPU with graphics support. The reason for this is that OpenCV is CPU heavy and without a decent CPU, the processing may grind to a halt or even hang.\\\\
 \textbf{RAM} -- 1GB DDR2 RAM. The processing is also RAM heavy, without enough RAM (or a swap file) the system may crash. \\\\
 \textbf{Network} -- Ethernet connectivity or 2.4GHz wireless to allow for the webserver to work (and for me to connect to the Pi to code headlessly).
-I have owned a Pi 3 for a while and this is what I will be using for the project, despite a Pi 4 being a better candidate. The Pi Zero offers a small form factor which may be better for a discrete camera, but it lacks the processing power for OpenCV. I will be using PuTTY to SSH into the Pi for the initial setup and then moving onto a VNC server to allow me to access the Pi from my standard desktop PC. I think that this will be easier than hot swapping keyboards and mice and changing inputs on my monitor 24/7. 
+I have owned a Pi 3 for a while and this is what I will be using for the project, despite a Pi 4 being a better candidate. The Pi Zero offers a small form factor which may be better for a discrete camera, but it lacks the processing power for OpenCV. I will be using PuTTY to SSH into the Pi for the initial setup and then moving onto a VNC server to allow me to access the Pi from my standard desktop PC. I think that this will be easier than hot swapping keyboards and mice and changing inputs on my monitor 24/7. \\\\
+As well as this, we will also need\\\\
+\textbf{Power Supply} -- 5V @ 2.4A to provide the Pi with enough power to run without throttling doe to undervolting, and also to power the NoIR.\\\\
+\textbf{Cables} -- We need enough cables to connect everything together. Figure \ref{fig_raspberryCables} shows the cables needed between each component. The NoIR comes with a ribbon cable
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5in]{raspberryCables.png}
+	\caption{A diagram that shows the connections between components and the respective cables}\label{fig_raspberryCables}
+\end{figure}
+
 \newpage
 \section{Success Criteria}\label{sec_succes}
 
@@ -126,8 +135,8 @@ I have owned a Pi 3 for a while and this is what I will be using for the project
 		This should be connectable via the local IP address of the Pi from any computer on the network. This allows me to remotely connect and code from my desktop computer – making the development process much easier.
 	\item \textbf{Set up the VNC server on the Pi and allow connection from my desktop.}\\
 		This provides similar functionality to the SSH connection capability as above – allowing me a better development experience. This should be at least a 768p desktop for a balance of screen space and speed.
-	\item \textbf{Set up the NoIR camera with the Raspberry Pi using raspi-config.}\\
-		This can be verified as working using the raspistill command in the terminal, a still photo should be taken. The orientation is irrelevant as this can be configured later on in the python solution.
+	\item \textbf{Set up the NoIR camera with the Raspberry Pi using \texttt{raspi-config}.}\\
+		This can be verified as working using the \texttt{raspistill} command in the terminal, a still photo should be taken. The orientation is irrelevant as this can be configured later on in the python solution.
 	\item \textbf{Change the swap size to allow for a greater memory capacity.}\\
 		There is a possibility that the solution uses more memory than available. This ensures me that there will be a sufficient amount of memory at the negative of wearing out the SD card storage at a quicker rate. This is because flash memory used in SD cards has limited read/write cycles before data starts to rot and become corrupt. I think a swap size of 2GB would be a good amount.
 	\item \textbf{Ensure that the latest version of Python 3 is installed (that is compatible with OpenCV) along with needed modules such as pip.}\\
@@ -689,10 +698,10 @@ With the device set-up, we can now move on to testing that is, infact, set-up co
 		\textbf{Test} & \textbf{Test Data}                                                                               & \textbf{Expected Outcome}                                                 & \textbf{Actual Outcome}                                                                       & \textbf{Passed?} \\ \midrule
 		1             & Adding power and watching for the LED lights on the board to indicate a successful boot sequence & The Pi should boot into the OS on the SD card                             & The Pi boots into the OS loaded on to the SD card. This is verifiable by SSH in the next test & YES              \\
 		2             & Attempting to connect to the Pi via SSH with its IP address and default credentials            & We should get a terminal on our desktop which allows us to control the Pi & We are given a terminal and are free do perform any commands as you would on the Pi itself    & YES              \\
-		3             & Attempt to connect to VNC server via IP address and default credentials & The VNC sever works correctly and we can connect from our PC, showing a desktop environment& The client connects via VNC and we are successful in having a desktop environment & YES \\
-		5             & & & & \\
-		6             & & & & \\
-		7             &                                                                                                  &                                                                           &                                                                                               &                  \\ \bottomrule
+		3             & Attempt to connect to VNC server via IP address and default credentials & The VNC sever works correctly and we can connect from our PC, showing a desktop environment
+& The client connects via VNC and we are successful in having a desktop environment & YES \\
+		4             & Running \texttt{Python} in the terminal to aquire the version number & The version matches a release within the last 6 months & The version was XXXXXXXXXX, which is XXXXX months old & YES \\
+		5             & Using the command \texttt{pip freeze} to view currently installed packages and their version & The version is less than 3 months old & The version was less than 3 months old & YES \\ \bottomrule
 	\end{tabularx}
 	\caption{A table showing the tests performed on the device setup, the result of the test, and success/failure}
 	\label{tab_deviceSetupTesting}
