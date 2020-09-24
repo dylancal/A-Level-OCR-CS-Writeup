@@ -709,8 +709,12 @@ With the device set-up, we can now move on to testing that is, infact, set-up co
 As all the tests needed for this section of construction have passed and that the success criteria governing the creation of this section has been adhered to, we can now move on to the next section of construction.
 
 
+
+
+
+
 \newpage
-\subsection{Getting a working video feed with OpenCV}
+\subsection{Getting a working video feed with OpenCV, face detection}
 For the next sections to work, we must generate some code that allows us to get a working image feed in Python. As we are using VNC and can see the desktop environment, it is sufficient to output the feed captured by OpenCV to a graphical window for now. Later on in the development after we move to the webpage, this will become deprecated and will be removed.
 
 I began with the following code in Python, comments are attached to the side and underneath certain lines for explanation.
@@ -728,7 +732,7 @@ obj_stream.set(4,600)
 # set camera width and height (800x600)
 while True: 
 # this is a basic runtime loop, i am to change this when i add the web interface to call this as a function
-	working, obj_videoFeed = stream.read() 
+	bool_working, obj_videoFeed = obj_stream.read() 
 	# 
 	obj_videoFeed = cv2.flip(obj_videoFeed, -1) 
 	# my setup needs the camera to be flipped due to its placement
@@ -758,6 +762,11 @@ cv2.destroyAllWindows()
 # destroy the image window
 \end{lstlisting}
 When this code is ran, the following window pops up which shows the result of Haar detection.
+
+I will now explain what the code does in more detail than the comments allow. Starting on \textbf{[1]}, we import the OpenCV library. This is a necessary step in order to access the OpenCV functions and objects. We then move on to \textbf{[3]}, where we store the path to the downloaded Haar cascade for detecting faces to a variable for easy re-use; this links straight to \textbf{[5]} where we create a classifier object with OpenCV by using the Haar cascade we mentioned before. With this object, we can call functions that use the Haar cascade. On \textbf{[7, 9, 10]} we first define the \texttt{obj\_stream} variable and then set parameters. The choice of width and height parameters will affect the performance and detail of the resulting images -- higher resolutions provide much more clarity but are harder to work with and will produce a video stream with a lower fps. I think 600p is a good balance between quality and performance on a device such as the Pi. Although this will be tested at other resolutions later. \\
+Line \textbf{[12]} is the start of the main loop of the current program; the code generates images from the camera then scans these for faces using a Haar method. In \textbf{[14]}, we get two outputs from reading the stream with the OpenCV \texttt{.read()} function -- the boolean \texttt{bool\_working} is \texttt{True} if the \texttt{.read()} function successfully generates images from the camera and \texttt{False} otherwise. The second returned variable, \texttt{obj\_videoFeed} is the images that the camera generates -- each time the \texttt{.read()} function is called a new frame will be generated.\\
+It is important to understand the difference between \texttt{obj\_stream} and \texttt{obj\_videoFeed}, the former is the object that represents the camera as an input device whilst the latter contains the output images read from that input device.\\
+On \textbf{[18]}, I define \texttt{obj\_videoFeedGray}, this uses the \texttt{.cvtColor()} function to change the colour of the frame captured. As a result, I now have 
 
 
 
