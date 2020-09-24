@@ -765,9 +765,22 @@ When this code is ran, the following window pops up which shows the result of Ha
 
 I will now explain what the code does in more detail than the comments allow. Starting on \textbf{[1]}, we import the OpenCV library. This is a necessary step in order to access the OpenCV functions and objects. We then move on to \textbf{[3]}, where we store the path to the downloaded Haar cascade for detecting faces to a variable for easy re-use; this links straight to \textbf{[5]} where we create a classifier object with OpenCV by using the Haar cascade we mentioned before. With this object, we can call functions that use the Haar cascade. On \textbf{[7, 9, 10]} we first define the \texttt{obj\_stream} variable and then set parameters. The choice of width and height parameters will affect the performance and detail of the resulting images -- higher resolutions provide much more clarity but are harder to work with and will produce a video stream with a lower fps. I think 600p is a good balance between quality and performance on a device such as the Pi. Although this will be tested at other resolutions later. \\
 Line \textbf{[12]} is the start of the main loop of the current program; the code generates images from the camera then scans these for faces using a Haar method. In \textbf{[14]}, we get two outputs from reading the stream with the OpenCV \texttt{.read()} function -- the boolean \texttt{bool\_working} is \texttt{True} if the \texttt{.read()} function successfully generates images from the camera and \texttt{False} otherwise. The second returned variable, \texttt{obj\_videoFeed} is the images that the camera generates -- each time the \texttt{.read()} function is called a new frame will be generated.\\
-It is important to understand the difference between \texttt{obj\_stream} and \texttt{obj\_videoFeed}, the former is the object that represents the camera as an input device whilst the latter contains the output images read from that input device.\\
-On \textbf{[18]}, I define \texttt{obj\_videoFeedGray}, this uses the \texttt{.cvtColor()} function to change the colour of the frame captured. As a result, I now have 
-
+It is important to understand the difference between \texttt{obj\_stream} and \texttt{obj\_videoFeed}, the former is the object that represents the camera as an input device whilst the latter contains the output images read from that input device.\	\
+On \textbf{[18]}, I define \texttt{obj\_videoFeedGray}, this uses the \texttt{.cvtColor()} function to change the colour of the frame captured. As a result, I now have both a color and a grayscale image of the frames produced by the camera. In \textbf{[20]}, the face cascade is used for the first time, we assign the output of the Haar detection algorithm to the variable faces. This is just a placeholder variable as all the information will be extracted soon after. The parameters defined within the \texttt{.detectMultiScale()} function will define how the Haar detection performs. The parameters are explained below
+\begin{table}[H]
+	\centering
+	\rowcolors{3}{tableShade}{white}
+	\begin{tabularx}{\textwidth}{lX}
+		\textbf{Parameter} & \textbf{Function}                                                                                                                                                                                          \\ \midrule
+		gray               & The image that the Haar detection will work on                                                                                                                                                             \\
+		scaleFactor        & Changes the maximum amount that the scale can be changed by for the face to still be detected. The model is trained from faces at a fixed size, so being able to scale the input image helps with matching \\
+		minNeighbours      & The amount of nearby detection candidates that a detection candidate needs to be finalised, higher values will give less total detections but more accurate detections at the cost of performance          \\
+		minSize            & Minimum size for applicable detection, our value means an object that is smaller than 30x30 will not be counted                                                                                           \\ \bottomrule
+	\end{tabularx}
+	\caption{A table showing what affect each paramter has on the solution}
+	\label{tab_lbphProCons}
+\end{table}
+From here, \textbf{[22]} loops between all of the faces that have been detected -- \texttt{[x, y, w, h]} refers to the co-ordinate of the face and the size of each face. We can use these to draw a rectangle in \textbf{[24]} using the \texttt{cv2.rectangle()} function, this uses the co-ordinates and size outlined in the for loop to draw a bounding box around each face in a frame. In a similar fashion, crops of the photo can be taken with the co-ordinates also, this happens in \textbf{[26, 28]}. From here, the code displays the final frame in a window which updates at the rate at which new frames arrive, this can be exited with the escape key where the code then releases the device from use so that it can be used again without error.
 
 
 
