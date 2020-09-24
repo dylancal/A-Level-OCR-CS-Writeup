@@ -19,7 +19,7 @@
 \BOOKMARK [3][-]{subsubsection.8.2.3}{Final Testing}{subsection.8.2}% 19
 \BOOKMARK [1][-]{section.9}{The Iterative Development Process}{}% 20
 \BOOKMARK [2][-]{subsection.9.1}{Setting up the Raspberry Pi}{section.9}% 21
-\BOOKMARK [2][-]{subsection.9.2}{Setting up the working environment}{section.9}% 22
+\BOOKMARK [2][-]{subsection.9.2}{Getting a working video feed with OpenCV}{section.9}% 22
 \BOOKMARK [1][-]{section.10}{Evaluation}{}% 23
 \BOOKMARK [2][-]{subsection.10.1}{Testing the product against our final criteria}{section.10}% 24
 \BOOKMARK [2][-]{subsection.10.2}{Sucess of the solution}{section.10}% 25

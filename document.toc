@@ -19,7 +19,7 @@
 \contentsline {subsubsection}{\numberline {8.2.3}Final Testing}{17}{subsubsection.8.2.3}%
 \contentsline {section}{\numberline {9}The Iterative Development Process}{18}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{19}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Setting up the working environment}{22}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV}{22}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Evaluation}{23}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Testing the product against our final criteria}{24}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Sucess of the solution}{25}{subsection.10.2}%

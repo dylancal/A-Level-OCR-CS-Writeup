@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  24 SEP 2020 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  24 SEP 2020 11:52
 entering extended mode
 **./document.tex
 (document.tex
@@ -778,7 +778,7 @@ File: ./figs/flowCameraworking.png Graphic file (type png)
 Package pdftex.def Info: ./figs/flowCameraworking.png  used on input line 310.
 (pdftex.def)             Requested size: 278.53993pt x 198.742pt.
  [9 <./figs/flowOverview.png>]
-<./figs/haarCascades.png, id=262, 166.37157pt x 140.77594pt>
+<./figs/haarCascades.png, id=261, 166.37157pt x 140.77594pt>
 File: ./figs/haarCascades.png Graphic file (type png)
 <use ./figs/haarCascades.png>
 Package pdftex.def Info: ./figs/haarCascades.png  used on input line 319.
@@ -789,7 +789,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 313--321
  []
 
 [10 <./figs/flowCameraworking.png> <./figs/haarCascades.png>]
-<./figs/lbphRecognition.png, id=278, 303.38344pt x 105.39375pt>
+<./figs/lbphRecognition.png, id=277, 303.38344pt x 105.39375pt>
 File: ./figs/lbphRecognition.png Graphic file (type png)
 <use ./figs/lbphRecognition.png>
 Package pdftex.def Info: ./figs/lbphRecognition.png  used on input line 359.
@@ -800,7 +800,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--361
  []
 
 [11 <./figs/lbphRecognition.png>]
-<./figs/facialRecognitionIdentify.png, id=314, 1408.51219pt x 773.89125pt>
+<./figs/facialRecognitionIdentify.png, id=313, 1408.51219pt x 773.89125pt>
 File: ./figs/facialRecognitionIdentify.png Graphic file (type png)
 <use ./figs/facialRecognitionIdentify.png>
 Package pdftex.def Info: ./figs/facialRecognitionIdentify.png  used on input li
@@ -816,12 +816,12 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 432.
 
-<./figs/webserverWhole.png, id=345, 998.22937pt x 636.87938pt>
+<./figs/webserverWhole.png, id=344, 998.22937pt x 636.87938pt>
 File: ./figs/webserverWhole.png Graphic file (type png)
 <use ./figs/webserverWhole.png>
 Package pdftex.def Info: ./figs/webserverWhole.png  used on input line 439.
 (pdftex.def)             Requested size: 346.89621pt x 221.31737pt.
-<./figs/webserverExtended.png, id=347, 986.18437pt x 513.41812pt>
+<./figs/webserverExtended.png, id=346, 986.18437pt x 513.41812pt>
 File: ./figs/webserverExtended.png Graphic file (type png)
 <use ./figs/webserverExtended.png>
 Package pdftex.def Info: ./figs/webserverExtended.png  used on input line 446.
@@ -871,7 +871,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 599--604
 
  []
 
-<./figs/flowTesting.png, id=413, 862.72313pt x 450.18187pt>
+<./figs/flowTesting.png, id=412, 862.72313pt x 450.18187pt>
 File: ./figs/flowTesting.png Graphic file (type png)
 <use ./figs/flowTesting.png>
 Package pdftex.def Info: ./figs/flowTesting.png  used on input line 613.
@@ -887,12 +887,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 610--615
  []
 
 [18 <./figs/flowTesting.png>]
-<./figs/raspberryPi.jpg, id=426, 1003.75pt x 679.53876pt>
+<./figs/raspberryPi.jpg, id=425, 1003.75pt x 679.53876pt>
 File: ./figs/raspberryPi.jpg Graphic file (type jpg)
 <use ./figs/raspberryPi.jpg>
 Package pdftex.def Info: ./figs/raspberryPi.jpg  used on input line 633.
 (pdftex.def)             Requested size: 289.07999pt x 195.70287pt.
-<./figs/raspberryPiBoot.png, id=432, 663.47874pt x 419.5675pt>
+<./figs/raspberryPiBoot.png, id=431, 663.47874pt x 419.5675pt>
 File: ./figs/raspberryPiBoot.png Graphic file (type png)
 <use ./figs/raspberryPiBoot.png>
 Package pdftex.def Info: ./figs/raspberryPiBoot.png  used on input line 663.
@@ -962,7 +962,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 692--708
 
  []
 
-[21] [22] [23] [24] [25] [26] [27] (document.bbl
+[21]
+(C:\Users\vi19DCall\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [22] [23] [24] [25] [26] [27] (document.bbl
 Underfull \hbox (badness 5345) in paragraph at lines 29--34
 []\OT1/cmr/m/n/10 National Eye In-sti-tute.  \OT1/cmr/m/it/10 Types of colour b
 lind-ness\OT1/cmr/m/n/10 .  []$\OT1/cmtt/m/n/10 https : / / www . nei . nih . g
@@ -970,14 +974,14 @@ ov / learn-[]about-[]eye-[]health /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 792.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 836.
  [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 792.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 836.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 792.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 792.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 836.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 836.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: C8BFF756DEFD98B9085A402B0E1B158E;2246.
+(rerunfilecheck)             Checksum: F7A23B7EA25E9B6220CCB7F86ABC512F;2252.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -985,39 +989,39 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 792.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 836.
  ) 
 Here is how much of TeX's memory you used:
- 14832 strings out of 481199
- 262654 string characters out of 2903719
- 588940 words of memory out of 3000000
- 29951 multiletter control sequences out of 15000+200000
- 546735 words of font info for 74 fonts, out of 3000000 for 9000
+ 15071 strings out of 481199
+ 265605 string characters out of 2903719
+ 885236 words of memory out of 3000000
+ 30143 multiletter control sequences out of 15000+200000
+ 546903 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,16n,46p,3329b,1061s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,16n,46p,3329b,1315s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\vi19DCall\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
 tcrm1000.pk><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vi19DCall/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/vi19DCall/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/vi19DCa
-ll/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr6.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr7.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vi19DCall/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/vi19DCall/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vi19
-DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C
-:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmti10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmtt10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/vi19DCall/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on document.pdf (29 pages, 1159371 bytes).
+ll/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:
+/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/vi19DCall/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/vi19DCall/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/vi1
+9DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy9.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vi19DCall/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on document.pdf (29 pages, 1176917 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 284 named destinations out of 1000 (max. 500000)
  280 words of extra memory for PDF output out of 10000 (max. 10000000)
 

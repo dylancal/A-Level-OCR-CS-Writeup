@@ -24,7 +24,7 @@
 \usepackage[sharp]{easylist}
 \usepackage{enumitem}
 \lstset{breaklines=true}
-\lstset{basicstyle=\fontsize{8}{10}\ttfamily, keywordstyle=\fontsize{8}{10}\bfseries}
+\lstset{basicstyle=\fontsize{9}{10}\ttfamily, keywordstyle=\fontsize{9}{10}\rmfamily\bfseries}
 \lstset{framesep=5pt}
 \lstset{tabsize=4}
 \lstset{numbers=left}
@@ -706,13 +706,58 @@ With the device set-up, we can now move on to testing that is, infact, set-up co
 	\caption{A table showing the tests performed on the device setup, the result of the test, and success/failure}
 	\label{tab_deviceSetupTesting}
 \end{table}
-
+As all the tests needed for this section of construction have passed and that the success criteria governing the creation of this section has been adhered to, we can now move on to the next section of construction.
 
 
 \newpage
-\subsection{Setting up the working environment}
+\subsection{Getting a working video feed with OpenCV}
+For the next sections to work, we must generate some code that allows us to get a working image feed in Python. As we are using VNC and can see the desktop environment, it is sufficient to output the feed captured by OpenCV to a graphical window for now. Later on in the development after we move to the webpage, this will become deprecated and will be removed.
 
-
+I began with the following code in Python, comments are attached to the side and underneath certain lines for explanation.
+\begin{lstlisting}[language=Python]
+import cv2 
+# import the OpenCV library used for facial recognition into our code, we can then call all functions in this library
+str_cascadePath =  'Cascades/haarcascade_frontalface_default.xml'
+# this file was taken directly from the OpenCV GitHub repo
+obj_faceCascade = cv2.CascadeClassifier(str_cascadePath) 
+# create a classifier object that is used to identify faces, we will be using the cascade that str_cascadePath points to
+obj_stream = cv2.VideoCapture(1) 
+# access the NoIR by creating an OpenCV object that uses the camera
+obj_stream.set(3,800) 
+obj_stream.set(4,600)
+# set camera width and height (800x600)
+while True: 
+# this is a basic runtime loop, i am to change this when i add the web interface to call this as a function
+	working, obj_videoFeed = stream.read() 
+	# 
+	obj_videoFeed = cv2.flip(obj_videoFeed, -1) 
+	# my setup needs the camera to be flipped due to its placement
+	obj_videoFeedGray = cv2.cvtColor(obj_videoFeed, cv2.COLOR_BGR2GRAY) 
+	# create a grayscale version of the frames captured using the OpenCV conversion
+	faces = faceCascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5, minSize=(30, 30)) 
+	# calls the function to detect faces using the Haar Cascade, applied to the gray image
+	for (x,y,w,h) in faces: 
+		# for each face...
+		cv2.rectangle(imgout,(x,y),(x+w,y+h),(0,0,0), 1) 
+		# draw a black rectangle of thickness 1 as a bounding box around the face
+		img_gray = obj_videoFeedGray[y:y+h, x:x+w] 
+		# creates images of the face detected in greyscale and in color
+		img_color = obj_videoFeed[y:y+h, x:x+w] 
+		# ive added these now to be used later when saving photos of unknown people, just for testing at the moment
+	cv2.imshow('Input feed', obj_videoFeed) 
+	# creates a window and streams the input from the camera from the variable imgout
+	key_k = cv2.waitKey(10) & 0xff 
+	# continually updates the image as long as ESC isnt pressed
+	if key_k == 27:
+		# if ESC pressed
+		break 
+		# break on ESC
+stream.release() 
+# free the camera, keep the hardware and software (mainly memory) tidy, this prevents errors with the camera being in-use whilst we try to run the code
+cv2.destroyAllWindows() 
+# destroy the image window
+\end{lstlisting}
+When this code is ran, the following window pops up which shows the result of Haar detection.
 
 
 
