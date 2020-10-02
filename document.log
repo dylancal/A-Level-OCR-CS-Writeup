@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  2 OCT 2020 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  2 OCT 2020 11:56
 entering extended mode
 **./document.tex
 (document.tex
@@ -593,11 +593,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 LaTeX Warning: Unused global option(s):
     [9pt].
 
-(document.aux
-
-LaTeX Warning: Label `tab_testingDesignSolution' multiply defined.
-
-)
+(document.aux)
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -888,44 +884,54 @@ Underfull \hbox (badness 3525) in paragraph at lines 517--517
 
 [16]
 
-LaTeX Warning: \verb may be unreliable inside tabularx on input line 605.
+LaTeX Warning: \verb may be unreliable inside tabularx on input line 603.
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 605--605
+Underfull \hbox (badness 4144) in paragraph at lines 603--603
 []|\OT1/cmr/m/n/10 Bounding box drawn around
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 605--605
+Underfull \hbox (badness 2409) in paragraph at lines 603--603
 \OT1/cmr/m/n/10 are de-tected, whilst all non-
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 605--605
+Underfull \hbox (badness 1924) in paragraph at lines 603--603
 []|\OT1/cmr/m/n/10 Running the code that takes
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 605--605
+Underfull \hbox (badness 2680) in paragraph at lines 603--603
 \OT1/cmr/m/n/10 snap-shots of faces and saves
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 605--605
+Underfull \hbox (badness 1248) in paragraph at lines 603--603
 []|\OT1/cmr/m/n/10 The file-names of the cropped
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 605--605
+Underfull \hbox (badness 2126) in paragraph at lines 603--603
 []|\OT1/cmr/m/n/10 The num-ber of pho-tos saved
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 605--605
+Underfull \hbox (badness 1033) in paragraph at lines 603--603
 \OT1/cmr/m/n/10 send a mes-sage to my phone
  []
 
-[17] [18] [19] [20]
+[17]
+Underfull \hbox (badness 6658) in paragraph at lines 618--618
+[]|\OT1/cmr/m/n/10 This should start tak-ing pho-tos
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 619--621
+
+ []
+
+[19] [20]
 Underfull \hbox (badness 10000) in paragraph at lines 690--695
 
  []
@@ -1066,15 +1072,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 992.
  ) 
 Here is how much of TeX's memory you used:
  15243 strings out of 481199
  268153 string characters out of 2903719
- 895798 words of memory out of 3000000
+ 895842 words of memory out of 3000000
  30286 multiletter control sequences out of 15000+200000
  546903 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1099,7 +1102,7 @@ m/cmsy9.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vi19DCall/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on document.pdf (34 pages, 1199963 bytes).
+Output written on document.pdf (34 pages, 1201717 bytes).
 PDF statistics:
  720 PDF objects out of 1000 (max. 8388607)
  301 named destinations out of 1000 (max. 500000)

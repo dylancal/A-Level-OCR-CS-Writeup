@@ -598,25 +598,25 @@ Once these tests are complete, we can say that the device is ready to start bein
 	26 & & & & \\
 	27 & & & & \\
 	28 & & & & \\
-	29 & & & & \\
-	30 & & & & \\
-	31 & & & & \\ \bottomrule
+	29 & & & & \\ \bottomrule
 \caption{A table showing the tests performed on the solution, with justification}\label{tab_testingDesignSolution}
 \end{tabularx}
 The sub-testing for the buttons is shown in the table below 
-\begin{tabularx}{\textwidth}{lXlXX}
+\begin{tabularx}{\textwidth}{lXXX}
 	
 	\endhead
-	\verb|#|&\textbf{Button}&\textbf{Intended action}&\textbf{Reason for action}&\\\midrule
-	1 & & &  \\
-	2 & & &  \\
-	3 & & &  \\
-	4 & & &  \\
-	5 & & &  \\
-	6 & & &  \\
-	7 & & &  \\ \bottomrule
+	\verb|#|&\textbf{Button}&\textbf{Intended action}&\textbf{Reason for action}\\\midrule
+	1 & `Capture Images for the Dataset' & This should start taking photos through the camera, saving them as the username (UUID) specified by the user in the input box & This is one of the set methods of adding faces to the dataset \\
+	2 & `Train Dataset` & This takes all photos in the current dataset, and trains them so recognition can occur & We need to train the dataset before we can begin recognition \\
+	3 & `Delete Dataset (All / One)` & Delete local images that comprise the dataset & This could happen in the event that we want to start over, or that we want to remove people from the dataset \\
+	4 & `Restart Pi / Server` & Restart the Pi (thus restarting the server) & If the solution stops working, a simple fix may be just to cycle the power to the Pi, this may fix issues that happen due to memory inconsistency \\
+	5 & `Take Screenshot` & Take a screenshot of the current frame that is on the webpage, save to Pi & If the user sees something suspicious whilst watching the stream, they may wish to a screenshot to record that moment \\
+	6 & `View / Download Screenshots` & List the screenshots with image previews, allow them to be clicked to download & The user may need to save screenshots to their device in order to share to other places \\
+	7 & `Upload images for the dataset` & This allows the user to upload a \texttt{.zip} of pictures of a person to be added to the dataset, with the name of the zip being the person to add & This is another of the ways in which the user should be able to add people to the database. This is best for if the person is not available for on-site enrolment \\
+	8 & `Toggle Twilio` & Suspend SMS service from the Twilio API & Users may find this annoying, or may expect lots of unknown users to appear in a timeframe. This allows the user to suspend warning alerts in these cases (to prevent annoyance)\\ \bottomrule
 	\caption{A table showing the tests performed to ensure buttons work as intended}\label{tab_testingDesignButtons}
 \end{tabularx}
+If all of these tests pass at the time of testing, then \textbf{(22)} can also be passed from the main testing table.\\\\
 Once all tests are complete and the solution has been finished \textit{i.e.} one stage from production/deployment, we can then move on to the final testing frame. This ensures one last time that the components work and most importantly, ensures that they work well together to form the final product.
 
 
