@@ -16,13 +16,13 @@
 \contentsline {subsection}{\numberline {8.2}Describing the testing methodology}{16}{subsection.8.2}%
 \contentsline {subsubsection}{\numberline {8.2.1}Testing the setup of the device}{16}{subsubsection.8.2.1}%
 \contentsline {subsubsection}{\numberline {8.2.2}Testing the solution}{17}{subsubsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.3}Final Testing}{19}{subsubsection.8.2.3}%
-\contentsline {section}{\numberline {9}The Iterative Development Process}{20}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{21}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV, face detection}{24}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Evaluation}{26}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Testing the product against our final criteria}{27}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Sucess of the solution}{28}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Describing the final product}{29}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Problems I encountered and what I would do in the future}{30}{subsection.10.4}%
-\contentsline {section}{Bibliography}{31}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {8.2.3}Final Testing}{20}{subsubsection.8.2.3}%
+\contentsline {section}{\numberline {9}The Iterative Development Process}{21}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{22}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV, face detection}{25}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Evaluation}{27}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Testing the product against our final criteria}{28}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Sucess of the solution}{29}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Describing the final product}{30}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Problems I encountered and what I would do in the future}{31}{subsection.10.4}%
+\contentsline {section}{Bibliography}{32}{subsection.10.4}%

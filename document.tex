@@ -567,7 +567,7 @@ Once these tests are complete, we can say that the device is ready to start bein
 %\end{table}
 \rowcolors{3}{tableShade}{white}
 \begin{tabularx}{\textwidth}{lXlXX}
-	 
+	
 	\endhead
 	\verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
 	1   & Running the code that uses the camera feed and Haar cascade with a face present & Valid & To ensure that the Haar detection can identify faces & Bounding box drawn around face, parameters as success criteria defines  \\
@@ -581,18 +581,18 @@ Once these tests are complete, we can say that the device is ready to start bein
 	9   & Running the code that trains the dataset into a file that can be read for `instructions' & Pass & To check if this section of code runs without error & There should be no errors at the interpret stage, before the code is ran \\
 	10  & Checking to see if the trainer code did read the files properly, this relies on \textbf{()} as we have no way of knowing this unless we check & Valid & To ensure that the right files have been read and that the ID system has been interpreted correctly & The trainer should have read and grouped images by ID, so that each person is treated as their own object no matter how many other people there are in the dataset\\
 	11  & The output of the trainer file & Valid & To check to see that the results of training have been saved correctly & The trainer file should be of the format \texttt{.yaml} and should not be empty \\
-	12  & Running the code that recognises faces based on the trainer file that we inputted previously & Pass & To see if there are any coding errors & The code should run without any errors before runtime \\
-	13  & Checking to see if the instruction file was read & Valid & To see if our solution can read the trained dataset and use this to identify faces & This relies on \textbf{()} -- later stages cannot be successful if this is not \\
+	12  & Running the code that identifies faces based on the trainer file that we inputted previously & Pass & To see if there are any coding errors & The code should run without any errors before runtime \\
+	13  & Checking to see if the instruction file was read & Valid & To see if our solution can read the trained dataset and use this to identify faces & This relies on \textbf{(14, 15, 16, 17)} -- later stages cannot be successful if this is not \\
 	14  & The accuracy of the recognition of the faces presented to the camera & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\ 
 	15 & The number of faces recognised and named & Valid & To see if the solution can handle more than one face at once & Each face should be identified with a name and confidence as set out in the success criteria	\\
 	16 & The code is given a face that is not in the dataset, or a false positive of a face & Erroneous & To see if the solution will mark the `face' as unknown instead of trying to identify it as a known face & The code should return that the face is unknown, the rest is carried through as per the success criteria \\
 	17 & Known faces are present in a different circumstance, such as different lighting conditions & Valid & To see if the data collected by the trainer can be extrapolated to other conditions too -- this would be hugely beneficial to the efficiency of the solution & The recogniser should be able to recognise faces in different conditions \\
 	18 & Sending a test message through the Twilio API & Valid & To see if my implementation of a function that sends an SMS works. If so, then this function needs only be called when needed in the code as we already know that it is working & The Twilio API call code should send a message to my phone number as specified in the code\\
-	19 & & & & \\
-	20 & & & & \\
-	21 & & & & \\
-	22 & & & & \\
-	23 & & & & \\
+	19 & Testing to see if the `basic' web-server code can be run & Pass & To see if we can start a Python web-server to serve a webpage to our client, as per the success criteria & The web server is run, and can be accessed on a web browser through the local IP and default port\\
+	20 & The web-server in \textbf{(19)} can be adapted to serve a HTML file along with CSS for styling & Valid & This would allow us to more easily control the contents of the webpage, as well as changing how the page looks. The separation of HTML and CSS will allow us to more easily change one part without affecting the other & The web-server should serve a HTML page which can be viewed via a browser as in \textbf{(19)}\\
+	21 & Checking to see that the video feed can be shown inside a set placeholder & Valid & This would allow the end-user to see the camera feed from most locations within the house, as long as they are connected to the local internet & The video feed from the camera is shown inside the placeholder on the webpage originally from (\textbf{19})\\
+	22 & Buttons, when clicked, perform their intended actions (this test will have a sub-table below this main testing-frame) & Valid & Buttons are on the web-page for a reason -- users need a way of interacting with the hardware/software on the Pi and the buttons are one way of doing that & When clicked, the purpose of the button should be fulfilled \\
+	23 & Entering a name into the name field should produce a new UUID that has not yet been taken & Valid & It is important that each name, although they should be unique themselves, has a unique user-ID. In the rare event that there are two people with the same name, the different UUIDs ensure that they are not treated equally & Each name entered has a different UUID in the main database \\
 	24 & & & & \\
 	25 & & & & \\
 	26 & & & & \\
@@ -603,10 +603,21 @@ Once these tests are complete, we can say that the device is ready to start bein
 	31 & & & & \\ \bottomrule
 \caption{A table showing the tests performed on the solution, with justification}\label{tab_testingDesignSolution}
 \end{tabularx}
-Once this is complete and the solution has been finished (one stage from production/deployment) we can then move on to the final testing frame. This ensures one last time that the components work and most importantly, ensures that they work well together to form the final product.
-
-
-
+The sub-testing for the buttons is shown in the table below 
+\begin{tabularx}{\textwidth}{lXlXX}
+	
+	\endhead
+	\verb|#|&\textbf{Button}&\textbf{Intended action}&\textbf{Reason for action}&\\\midrule
+	1 & & &  \\
+	2 & & &  \\
+	3 & & &  \\
+	4 & & &  \\
+	5 & & &  \\
+	6 & & &  \\
+	7 & & &  \\ \bottomrule
+	\caption{A table showing the tests performed to ensure buttons work as intended}\label{tab_testingDesignButtons}
+\end{tabularx}
+Once all tests are complete and the solution has been finished \textit{i.e.} one stage from production/deployment, we can then move on to the final testing frame. This ensures one last time that the components work and most importantly, ensures that they work well together to form the final product.
 
 
 

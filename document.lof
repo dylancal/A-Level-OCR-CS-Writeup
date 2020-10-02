@@ -6,6 +6,6 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces A flowchart describing the logic in the identification stage\relax }}{12}{figure.caption.8}%
 \contentsline {figure}{\numberline {7}{\ignorespaces A flowchart showing the top-level logic for the web-server\relax }}{13}{figure.caption.9}%
 \contentsline {figure}{\numberline {8}{\ignorespaces A flowchart showing the logic in the web-server subprocess from Figure \ref {fig_webserver}\relax }}{14}{figure.caption.10}%
-\contentsline {figure}{\numberline {9}{\ignorespaces A flowchart showing how the testing logic links to our development\relax }}{20}{figure.caption.14}%
-\contentsline {figure}{\numberline {10}{\ignorespaces A picture showing the connections available on the Pi 3B\relax }}{21}{figure.caption.15}%
-\contentsline {figure}{\numberline {11}{\ignorespaces The login screen for the Pi terminal, shown on the PuTTY terminal\relax }}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {9}{\ignorespaces A flowchart showing how the testing logic links to our development\relax }}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces A picture showing the connections available on the Pi 3B\relax }}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {11}{\ignorespaces The login screen for the Pi terminal, shown on the PuTTY terminal\relax }}{23}{figure.caption.16}%
