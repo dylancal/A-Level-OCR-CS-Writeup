@@ -1,11 +1,11 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces A diagram that shows the connections between components and the respective cables\relax }}{4}{figure.caption.2}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Flowchart showing the logic behind the non-web section of the solution\relax }}{9}{figure.caption.3}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart that shows the try and except syntax for the camera validation\relax }}{10}{figure.caption.4}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Types of features detected by Haar Cascades \cite {haarImage}\relax }}{10}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces A picture showing each stage of the LPBH recognition process \cite {lbphDiagram}\relax }}{11}{figure.caption.6}%
-\contentsline {figure}{\numberline {6}{\ignorespaces A flowchart describing the logic in the identification stage\relax }}{12}{figure.caption.8}%
-\contentsline {figure}{\numberline {7}{\ignorespaces A flowchart showing the top-level logic for the web-server\relax }}{13}{figure.caption.9}%
-\contentsline {figure}{\numberline {8}{\ignorespaces A flowchart showing the logic in the web-server subprocess from Figure \ref {fig_webserver}\relax }}{14}{figure.caption.10}%
-\contentsline {figure}{\numberline {9}{\ignorespaces A flowchart showing how the testing logic links to our development\relax }}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {10}{\ignorespaces A picture showing the connections available on the Pi 3B\relax }}{22}{figure.caption.15}%
-\contentsline {figure}{\numberline {11}{\ignorespaces The login screen for the Pi terminal, shown on the PuTTY terminal\relax }}{23}{figure.caption.16}%
+\contentsline {figure}{\numberline {1}{\ignorespaces A diagram that shows the connections between components and the respective cables\relax }}{5}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Flowchart showing the logic behind the non-web section of the solution\relax }}{10}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart that shows the try and except syntax for the camera validation\relax }}{11}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Types of features detected by Haar Cascades \cite {haarImage}\relax }}{11}{figure.caption.5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces A picture showing each stage of the LPBH recognition process \cite {lbphDiagram}\relax }}{12}{figure.caption.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces A flowchart describing the logic in the identification stage\relax }}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces A flowchart showing the top-level logic for the web-server\relax }}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {8}{\ignorespaces A flowchart showing the logic in the web-server subprocess from Figure \ref {fig_webserver}\relax }}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {9}{\ignorespaces A flowchart showing how the testing logic links to our development\relax }}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces A picture showing the connections available on the Pi 3B\relax }}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {11}{\ignorespaces The login screen for the Pi terminal, shown on the PuTTY terminal\relax }}{24}{figure.caption.16}%
