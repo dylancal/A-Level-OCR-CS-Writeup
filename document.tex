@@ -10,7 +10,8 @@
 \usepackage{amsfonts}
 \usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage{tabularx}
+%\usepackage{tabularx}
+\usepackage{ltablex}
 \graphicspath{{./figs/}}
 \usepackage{color}
 \usepackage{float}
@@ -517,69 +518,148 @@ In the table above, we can see the switch case and Hungarian notation at work --
 	\caption{A table showing the tests performed on the device, with justification}
 	\label{tab_testingDesignDevice}
 \end{table}
-Once these tests are complete, we can say that the device is ready to start being used to develop the solution on --  all the necessary components and dependencies are now there. The nexct stage is now working out a testing frame for the solution. This is a much larger task due to the scale of the solution and the immense amount of work needed to process and perform each test on each component
+Once these tests are complete, we can say that the device is ready to start being used to develop the solution on --  all the necessary components and dependencies are now there. The next stage is now working out a testing frame for the solution. This is a much larger task due to the scale of the solution and the immense amount of work needed to process and perform each test on each component
 
-
+\newpage
 \subsubsection{Testing the solution}
-\begin{table}[H]
-	\centering
-	\rowcolors{3}{tableShade}{white}
-	\begin{tabularx}{\textwidth}{lXlXX}
-		\multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}
-			 Test  \\
-			Number
-		\end{tabular}}} & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
-		1                                                                                   & bla bla this is the test data & Normal             & To check to make sure it works & To check to make sure it works \\
-		2                                                                                   &                               &                    &                                &                                \\
-		3                                                                                   &                               &                    &                                &                                \\
-		4                                                                                   &                               &                    &                                &                                \\
-		5                                                                                   &                               &                    &                                &                                \\
-		6                                                                                   &                               &                    &                                &                                \\
-		7                                                                                   &                               &                    &                                &                                \\
-		8                                                                                   &                               &                    &                                &                                \\
-		9                                                                                   &                               &                    &                                &                                \\
-		10                                                                                  &                               &                    &                                &                                \\
-		11                                                                                  &                               &                    &                                &                                \\
-		12                                                                                  &                               &                    &                                &                                \\
-		13                                                                                  &                               &                    &                                &                                \\
-		14                                                                                  &                               &                    &                                &                                \\ \bottomrule
-	\end{tabularx}
-	\caption{A table showing the tests performed on the solution, with justification}
-	\label{tab_testingDesignSolution}
-\end{table}
+%\begin{table}[H]
+%	\centering
+%	\rowcolors{3}{tableShade}{white}
+%	\begin{tabularx}{\textwidth}{lXlXX}
+%		\textbf{Test} \verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
+%		\endhead
+%		1   & Running the code that uses the camera feed and Haar cascade with a face present & Valid & To ensure that the Haar detection can identify faces & Bounding box drawn around face, parameters as success criteria defines  \\
+%		2   & The same as above, with no faces present  & Boundary & To ensure that the Haar algorithm does not throw an error when no faces are present & The camera feed is visible with no bounding boxes drawn \\
+%		3   & The same as \textbf{(1)} but with many ($ > $3) faces present & Valid & To ensure that the Haar cascade can recognise many people, and the boundary draw function can accept many people & A boundary box drawn around each face \\
+%		4   & The three tests above, ran at 20 minutes with similar looking objects to faces presented to the camera & Boundary & To ensure that the solution is sustainable and to check for the prevalence of false positives and negatives  & The solution only identifies the human faces and that all faces are detected, whilst all non-faces are not regarded as candidates and no bounding boxes are drawn \\
+%		5   & Running the code that takes snapshots of faces and saves them to the device & Pass & To check if the code runs at all, or if errors are encountered & The code should run without any errors occurring before runtime \\
+%		6   & The cropped photos generated from \textbf{(5)} & Valid & To ensure that the photos crop correctly, with the faces near the centre of the frame -- this is what works best for the trainer code later on & The faces should be near the centre of the frame, and be cropped correctly\\
+%		7   & The filenames of the cropped photos from \textbf{(5)} & Valid & To ensure that the filenames are correct -- the ID system needs to be working correctly before the trainer can be implemented & The files should be in the format as defined by the success criteria, corresponding to the ID set in the code at runtime \\
+%		8   & The amount of photos taken each time the capture code from \textbf{(5)} is ran & Valid & to ensure there are enough photos for the trainer to use. The more photos that the trainer has, the more likely that the trainer will be successful in identifying individual features that define a unique face &  The number of photos saved should match the number that is specified in the code \\
+%		9   & Running the code that trains the dataset into a file that can be read for `instructions' & Pass & To check if this section of code runs without error & There should be no errors at the interpret stage, before the code is ran \\
+%		10  & Checking to see if the trainer code did read the files properly, this relies on \textbf{()} as we have no way of knowing this unless we check & Valid & To ensure that the right files have been read and that the ID system has been interpreted correctly & The trainer should have read and grouped images by ID, so that each person is treated as their own object no matter how many other people there are in the dataset\\
+%		11  & The output of the trainer file & Valid & To check to see that the results of training have been saved correctly & The trainer file should be of the format \texttt{.yaml} and should not be empty \\
+%		12  & Running the code that recognises faces based on the trainer file that we inputted previously & Pass & To see if there are any coding errors & The code should run without any errors before runtime \\
+%		13  & Checking to see if the instruction file was read & Valid & To see if our solution can read the trained dataset and use this to identify faces & This relies on \textbf{()} -- later stages cannot be successful if this is not \\
+%		14  & The accuracy of the recognition & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\ 
+%		14  & The accuracy of the recognition & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\
+%		14  & The accuracy of the recognition & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\
+%		& & & & \\ \bottomrule
+%	\end{tabularx}
+%	\caption{A table showing the tests performed on the solution, with justification}
+%	\label{tab_testingDesignSolution}
+%\end{table}
+\rowcolors{3}{tableShade}{white}
+\begin{tabularx}{\textwidth}{lXlXX}
+	 
+	\endhead
+	\verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
+	1   & Running the code that uses the camera feed and Haar cascade with a face present & Valid & To ensure that the Haar detection can identify faces & Bounding box drawn around face, parameters as success criteria defines  \\
+	2   & The same as above, with no faces present  & Boundary & To ensure that the Haar algorithm does not throw an error when no faces are present & The camera feed is visible with no bounding boxes drawn \\
+	3   & The same as \textbf{(1)} but with many ($ > $3) faces present & Valid & To ensure that the Haar cascade can recognise many people, and the boundary draw function can accept many people & A boundary box drawn around each face \\
+	4   & The three tests above, ran at 20 minutes with similar looking objects to faces presented to the camera & Boundary & To ensure that the solution is sustainable and to check for the prevalence of false positives and negatives  & The solution only identifies the human faces and that all faces are detected, whilst all non-faces are not regarded as candidates and no bounding boxes are drawn \\
+	5   & Running the code that takes snapshots of faces and saves them to the device & Pass & To check if the code runs at all, or if errors are encountered & The code should run without any errors occurring before runtime \\
+	6   & The cropped photos generated from \textbf{(5)} & Valid & To ensure that the photos crop correctly, with the faces near the centre of the frame -- this is what works best for the trainer code later on & The faces should be near the centre of the frame, and be cropped correctly\\
+	7   & The filenames of the cropped photos from \textbf{(5)} & Valid & To ensure that the filenames are correct -- the ID system needs to be working correctly before the trainer can be implemented & The files should be in the format as defined by the success criteria, corresponding to the ID set in the code at runtime \\
+	8   & The amount of photos taken each time the capture code from \textbf{(5)} is ran & Valid & to ensure there are enough photos for the trainer to use. The more photos that the trainer has, the more likely that the trainer will be successful in identifying individual features that define a unique face &  The number of photos saved should match the number that is specified in the code \\
+	9   & Running the code that trains the dataset into a file that can be read for `instructions' & Pass & To check if this section of code runs without error & There should be no errors at the interpret stage, before the code is ran \\
+	10  & Checking to see if the trainer code did read the files properly, this relies on \textbf{()} as we have no way of knowing this unless we check & Valid & To ensure that the right files have been read and that the ID system has been interpreted correctly & The trainer should have read and grouped images by ID, so that each person is treated as their own object no matter how many other people there are in the dataset\\
+	11  & The output of the trainer file & Valid & To check to see that the results of training have been saved correctly & The trainer file should be of the format \texttt{.yaml} and should not be empty \\
+	12  & Running the code that recognises faces based on the trainer file that we inputted previously & Pass & To see if there are any coding errors & The code should run without any errors before runtime \\
+	13  & Checking to see if the instruction file was read & Valid & To see if our solution can read the trained dataset and use this to identify faces & This relies on \textbf{()} -- later stages cannot be successful if this is not \\
+	14  & The accuracy of the recognition of the faces presented to the camera & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\ 
+	15 & The number of faces recognised and named & Valid & To see if the solution can handle more than one face at once & Each face should be identified with a name and confidence as set out in the success criteria	\\
+	16 & The code is given a face that is not in the dataset, or a false positive of a face & Erroneous & To see if the solution will mark the `face' as unknown instead of trying to identify it as a known face & The code should return that the face is unknown, the rest is carried through as per the success criteria \\
+	17 & Known faces are present in a different circumstance, such as different lighting conditions & Valid & To see if the data collected by the trainer can be extrapolated to other conditions too -- this would be hugely beneficial to the efficiency of the solution & The recogniser should be able to recognise faces in different conditions \\
+	18 & Sending a test message through the Twilio API & Valid & To see if my implementation of a function that sends an SMS works. If so, then this function needs only be called when needed in the code as we already know that it is working & The Twilio API call code should send a message to my phone number as specified in the code\\
+	19 & & & & \\
+	20 & & & & \\
+	21 & & & & \\
+	22 & & & & \\
+	23 & & & & \\
+	24 & & & & \\
+	25 & & & & \\
+	26 & & & & \\
+	27 & & & & \\
+	28 & & & & \\
+	29 & & & & \\
+	30 & & & & \\
+	31 & & & & \\ \bottomrule
+\caption{A table showing the tests performed on the solution, with justification}\label{tab_testingDesignSolution}
+\end{tabularx}
 Once this is complete and the solution has been finished (one stage from production/deployment) we can then move on to the final testing frame. This ensures one last time that the components work and most importantly, ensures that they work well together to form the final product.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 \subsubsection{Final Testing}
 \begin{table}[H]
 	\centering
 	\rowcolors{3}{tableShade}{white}
 	\begin{tabularx}{\textwidth}{lXlXX}
-		\multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}
-					Test  \\
-					Number
-		\end{tabular}}} & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
-		1                                                                                   & bla bla this is the test data & Normal             & To check to make sure it works & To check to make sure it works \\
-		2                                                                                   &                               &                    &                                &                                \\
-		3                                                                                   &                               &                    &                                &                                \\
-		4                                                                                   &                               &                    &                                &                                \\
-		5                                                                                   &                               &                    &                                &                                \\
-		6                                                                                   &                               &                    &                                &                                \\
-		7                                                                                   &                               &                    &                                &                                \\
-		8                                                                                   &                               &                    &                                &                                \\
-		9                                                                                   &                               &                    &                                &                                \\
-		10                                                                                  &                               &                    &                                &                                \\
-		11                                                                                  &                               &                    &                                &                                \\
-		12                                                                                  &                               &                    &                                &                                \\
-		13                                                                                  &                               &                    &                                &                                \\
-		14                                                                                  &                               &                    &                                &                                \\ \bottomrule
+		\textbf{Test} \verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
+		1   &  &  &  & \\
+		2   &  &  &  & \\
+		3   &  &  &  & \\
+		4   &  &  &  & \\
+		5   &  &  &  & \\
+		6   &  &  &  & \\
+		7   &  &  &  & \\
+		8   &  &  &  & \\
+		9   &  &  &  & \\
+		10  &  &  &  & \\
+		11  &  &  &  & \\
+		12  &  &  &  & \\
+		13  &  &  &  & \\
+		14  &  &  &  & \\ \bottomrule
 	\end{tabularx}
 	\caption{A table showing the \textbf{final} tests performed on the solution, with justification}
 	\label{tab_testingDesignSolutionFinal}
 \end{table}
-
-
-
-
 
 
 
@@ -778,9 +858,48 @@ On \textbf{[18]}, I define \texttt{obj\_videoFeedGray}, this uses the \texttt{.c
 		minSize            & Minimum size for applicable detection, our value means an object that is smaller than 30x30 will not be counted                                                                                           \\ \bottomrule
 	\end{tabularx}
 	\caption{A table showing what affect each paramter has on the solution}
-	\label{tab_lbphProCons}
+	\label{tab_haarParamsExplain}
 \end{table}
-From here, \textbf{[22]} loops between all of the faces that have been detected -- \texttt{[x, y, w, h]} refers to the co-ordinate of the face and the size of each face. We can use these to draw a rectangle in \textbf{[24]} using the \texttt{cv2.rectangle()} function, this uses the co-ordinates and size outlined in the for loop to draw a bounding box around each face in a frame. In a similar fashion, crops of the photo can be taken with the co-ordinates also, this happens in \textbf{[26, 28]}. From here, the code displays the final frame in a window which updates at the rate at which new frames arrive, this can be exited with the escape key where the code then releases the device from use so that it can be used again without error.
+From here, \textbf{[22]} loops between all of the faces that have been detected -- \texttt{[x, y, w, h]} refers to the co-ordinate of the face and the size of each face. We can use these to draw a rectangle in \textbf{[24]} using the \texttt{cv2.rectangle()} function, this uses the co-ordinates and size outlined in the for loop to draw a bounding box around each face in a frame. In a similar fashion, crops of the photo can be taken with the co-ordinates also, this happens in \textbf{[26, 28]}. From here, the code displays the final frame in a window which updates at the rate at which new frames arrive, this can be exited with the escape key where the code then releases the device from use so that it can be used again without error.\\\\
+Comparing the code we have written to the success criteria. we can make the following observations.
+\begin{table}[H]
+	\centering
+	\rowcolors{3}{tableShade}{white}
+	\begin{tabularx}{\textwidth}{lX}
+		\textbf{Criteria} & \textbf{Observation}                                                                                                                                                                                                   \\ \midrule
+		1.a.($ \gamma $)  & The camera view is clear, we can make out faces very well and the camera is orientated correctly on the output                                                                                                         \\
+		1.b.($ \gamma $)  & There is a perceivable amount of latency that is noticible, although this is less than a second on measurement. There is increased latency and decreased frames per second when a face is detected by the Haar cascade \\
+		2.a.($ \gamma $)  & In the code I wrote, the box is not clear as it is only 1px thick at source -- we can try to fix this when me make post-testing amendments                                                                             \\
+		2.b.($ \gamma $)  & The Haar cascade seems to identify faces well, and doesn't seem to pick up many false positives. This will be tested more thoroughly in later sections of the code however \\ \bottomrule
+	\end{tabularx}
+	\caption{A table comparing the code we wrote to the criteria we set out previously}
+	\label{tab_successCameraTest}
+\end{table}
+Overall, we have adhered to the success criteria for this section pretty well. All the positive aspects can be carried forward whilst the negative aspect (bounding box clarity) can be worked on post-testing.\\
+The testing for this section is outlined below
+\begin{table}[H]
+	\centering
+	\rowcolors{3}{tableShade}{white}
+	\begin{tabularx}{\textwidth}{lXXXl}
+		Test & \textbf{Test Data} & \textbf{Expected Outcome} & \textbf{Actual Outcome} & \textbf{Passed?} \\ \midrule
+		1    &                    &                  &                &         \\
+		14   &                    &                  &                &         \\ \bottomrule
+	\end{tabularx}
+	\caption{A table showing the results of tests performed on the this section of the solution}
+	\label{tab_testingCameraTest}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -856,13 +975,16 @@ From here, \textbf{[22]} loops between all of the faces that have been detected 
 \newpage
 \addcontentsline{toc}{section}{Bibliography}
 \bibliography{biblio}
+
+\newpage
+\listoffigures
 \end{document}
 %
 %\begin{table}[H]
 %	\centering
 %	\rowcolors{3}{tableShade}{white}
 %	\begin{tabularx}{\textwidth}{lXXXl}
-%		Test & \textbf{Test Data} & Expected Outcome & Actual Outcome & Passed? \\ \midrule
+%		Test & \textbf{Test Data} & \textbf{Expected Outcome} & \textbf{Actual Outcome} & \textbf{Passed?} \\ \midrule
 %		1    &                    &                  &                &         \\
 %		14   &                    &                  &                &         \\ \bottomrule
 %	\end{tabularx}
