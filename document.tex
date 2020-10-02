@@ -522,53 +522,10 @@ Once these tests are complete, we can say that the device is ready to start bein
 
 \newpage
 \subsubsection{Testing the solution}
-%\begin{table}[H]
-%	\centering
-%	\rowcolors{3}{tableShade}{white}
-%	\begin{tabularx}{\textwidth}{lXlXX}
-%		\textbf{Test} \verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
-%		\endhead
-%		1   & Running the code that uses the camera feed and Haar cascade with a face present & Valid & To ensure that the Haar detection can identify faces & Bounding box drawn around face, parameters as success criteria defines  \\
-%		2   & The same as above, with no faces present  & Boundary & To ensure that the Haar algorithm does not throw an error when no faces are present & The camera feed is visible with no bounding boxes drawn \\
-%		3   & The same as \textbf{(1)} but with many ($ > $3) faces present & Valid & To ensure that the Haar cascade can recognise many people, and the boundary draw function can accept many people & A boundary box drawn around each face \\
-%		4   & The three tests above, ran at 20 minutes with similar looking objects to faces presented to the camera & Boundary & To ensure that the solution is sustainable and to check for the prevalence of false positives and negatives  & The solution only identifies the human faces and that all faces are detected, whilst all non-faces are not regarded as candidates and no bounding boxes are drawn \\
-%		5   & Running the code that takes snapshots of faces and saves them to the device & Pass & To check if the code runs at all, or if errors are encountered & The code should run without any errors occurring before runtime \\
-%		6   & The cropped photos generated from \textbf{(5)} & Valid & To ensure that the photos crop correctly, with the faces near the centre of the frame -- this is what works best for the trainer code later on & The faces should be near the centre of the frame, and be cropped correctly\\
-%		7   & The filenames of the cropped photos from \textbf{(5)} & Valid & To ensure that the filenames are correct -- the ID system needs to be working correctly before the trainer can be implemented & The files should be in the format as defined by the success criteria, corresponding to the ID set in the code at runtime \\
-%		8   & The amount of photos taken each time the capture code from \textbf{(5)} is ran & Valid & to ensure there are enough photos for the trainer to use. The more photos that the trainer has, the more likely that the trainer will be successful in identifying individual features that define a unique face &  The number of photos saved should match the number that is specified in the code \\
-%		9   & Running the code that trains the dataset into a file that can be read for `instructions' & Pass & To check if this section of code runs without error & There should be no errors at the interpret stage, before the code is ran \\
-%		10  & Checking to see if the trainer code did read the files properly, this relies on \textbf{()} as we have no way of knowing this unless we check & Valid & To ensure that the right files have been read and that the ID system has been interpreted correctly & The trainer should have read and grouped images by ID, so that each person is treated as their own object no matter how many other people there are in the dataset\\
-%		11  & The output of the trainer file & Valid & To check to see that the results of training have been saved correctly & The trainer file should be of the format \texttt{.yaml} and should not be empty \\
-%		12  & Running the code that recognises faces based on the trainer file that we inputted previously & Pass & To see if there are any coding errors & The code should run without any errors before runtime \\
-%		13  & Checking to see if the instruction file was read & Valid & To see if our solution can read the trained dataset and use this to identify faces & This relies on \textbf{()} -- later stages cannot be successful if this is not \\
-%		14  & The accuracy of the recognition & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\ 
-%		14  & The accuracy of the recognition & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\
-%		14  & The accuracy of the recognition & Valid & To see if the parameters set for recognition give us enough accuracy for us to say it properly `recognises' faces & The accuracy should be as defined in the success criteria, the testing for this can follow the rules laid out in the success criteria and the testing for this will be detailed \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\
-%		& & & & \\ \bottomrule
-%	\end{tabularx}
-%	\caption{A table showing the tests performed on the solution, with justification}
-%	\label{tab_testingDesignSolution}
-%\end{table}
-\rowcolors{3}{tableShade}{white}
+\global\rownum=0\relax
+\rowcolors{2}{white}{tableShade}
 \begin{tabularx}{\textwidth}{lXlXX}
-	
-	\endhead
+	\global\rownum=0\relax
 	\verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
 	1   & Running the code that uses the camera feed and Haar cascade with a face present & Valid & To ensure that the Haar detection can identify faces & Bounding box drawn around face, parameters as success criteria defines  \\
 	2   & The same as above, with no faces present  & Boundary & To ensure that the Haar algorithm does not throw an error when no faces are present & The camera feed is visible with no bounding boxes drawn \\
@@ -601,11 +558,13 @@ Once these tests are complete, we can say that the device is ready to start bein
 	29 & & & & \\ \bottomrule
 \caption{A table showing the tests performed on the solution, with justification}\label{tab_testingDesignSolution}
 \end{tabularx}
-The sub-testing for the buttons is shown in the table below 
+The sub-testing for the buttons is shown in the table below
+\rowcolors{1}{white}{tableShade}
+\global\rownum=0\relax 
 \begin{tabularx}{\textwidth}{lXXX}
-	
-	\endhead
-	\verb|#|&\textbf{Button}&\textbf{Intended action}&\textbf{Reason for action}\\\midrule
+	\global\rownum=0\relax
+	\verb|#|&\textbf{Button}&\textbf{Intended action}&\textbf{Reason for action}\\ \midrule
+	\global\rownum=0\relax
 	1 & `Capture Images for the Dataset' & This should start taking photos through the camera, saving them as the username (UUID) specified by the user in the input box & This is one of the set methods of adding faces to the dataset \\
 	2 & `Train Dataset` & This takes all photos in the current dataset, and trains them so recognition can occur & We need to train the dataset before we can begin recognition \\
 	3 & `Delete Dataset (All / One)` & Delete local images that comprise the dataset & This could happen in the event that we want to start over, or that we want to remove people from the dataset \\
