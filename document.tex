@@ -145,16 +145,16 @@ The task of facial recognition and identification heavily involves ideas from bo
 \textbf{CPU} -- 2 Core 1GHz CPU with graphics support. The reason for this is that OpenCV is CPU heavy and without a decent CPU, the processing may grind to a halt or even hang.\\\\
 \textbf{RAM} -- 1GB DDR2 RAM. The processing is also RAM heavy, without enough RAM (or a swap file) the system may crash. \\\\
 \textbf{Network} -- Ethernet connectivity or 2.4GHz wireless to allow for the webserver to work (and for me to connect to the Pi to code headlessly).
-I have owned a Pi 3 for a while and this is what I will be using for the project, despite a Pi 4 being a better candidate. The Pi Zero offers a small form factor which may be better for a discrete camera, but it lacks the processing power for OpenCV. I will be using PuTTY to SSH into the Pi for the initial setup and then moving onto a VNC server to allow me to access the Pi from my standard desktop PC. I think that this will be easier than hot swapping keyboards and mice and changing inputs on my monitor 24/7. \\\\
+I have owned a Pi 3 for a while and this is what I will be using for the project, despite a Pi 4 being a better candidate. The Pi Zero offers a small form factor which may be better for a discrete camera, but it lacks the processing power for OpenCV.\\\\
 As well as this, we will also need\\\\
 \textbf{Power Supply} -- 5V @ 2.4A to provide the Pi with enough power to run without throttling doe to undervolting, and also to power the NoIR.\\\\
 \textbf{Cables} -- We need enough cables to connect everything together. Figure \ref{fig_raspberryCables} shows the cables needed between each component. The NoIR comes with a ribbon cable
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5in]{raspberryCables.png}
+	\includegraphics[width=4.5in]{raspberryCables.png}
 	\caption{A diagram that shows the connections between components and the respective cables}\label{fig_raspberryCables}
 \end{figure}
-
+On the software side, I will be using Python and libraries such as Pillow, Flask and OpenCV. OpenCV will be the library used the most throughout the project and is most notable when talking about my solution -- this library provides computer vision support for Python on the Pi. I can code around this library in order to complete my solution as needed.
 \newpage
 \section{Success Criteria}\label{sec_succes}
 
@@ -317,12 +317,19 @@ References to each group of success criteria will be with the symbols $\alpha,\b
 \newpage
 \section{Design of the solution}\label{sec_design}
 \subsection{Decomposition of the problem and application to the solution}\label{sec_decomposition}
+The start of the design section occurs after using decomposition to break down the problem. The ERD on Figure \ref{fig_designDecomposition} shows the decomposition of the points of interest in my problem.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4.6in]{designDecomposition.png}
+	\caption{A diagram to show the relationship between entities in my solution}\label{fig_designDecomposition}
+\end{figure}
+In order to make the connection between images and faces, I will be incorporating the OpenCV library in my solution as mentioned previously. The buttons on the webpage can be linked to the underlying Python back-end, which controls how the faces seen by the camera are handled.
 \subsubsection{The non-web areas of the solution}\label{sec_nonWeb}
 In this section, I will be breaking down the solution into multiple sections which are suitable for a computational approach. The code here is mostly of a pseudocode format, although it will be very `pythonesque’ – with many keywords matching that of Python.
 As a whole, the non-web facing portion can be represented by the flowchart on Figure \ref{fig_flowOverview} – this part shows the logic of how all face-related functions works.
 \begin{figure}[H]
 	\centering
-	\includegraphics{flowOverview.png}
+	\includegraphics[width=6.2in]{flowOverview.png}
 	\caption{Flowchart showing the logic behind the non-web section of the solution}\label{fig_flowOverview}
 \end{figure}
 We can go more in depth into many areas of this flowchart. This shows decomposition and abstraction at work heavily – we are breaking the problem down and then removing all unnecessary parts that the solution does not require in order to function correctly and follow the logic that is intended. 
@@ -342,13 +349,13 @@ except AssertionError:
 	\includegraphics{flowCameraworking.png}
 	\caption{Flowchart that shows the try and except syntax for the camera validation}\label{fig_cameraWorking}
 \end{figure}
-This code, despite being rather simple, is fundamental to the solution as the other blocks of code all rely on a working camera feed. In the event that this is not possible, it is important to have a good fallback subroutine that still gives the end user lots of options. This is because the end user will not have access to the source code, and they likely are a novice computer user – they therefore both lack the skill and the tools required to debug the code and fix it themselves. As with most of the following sections, it is important to code for as many possibilities as possible, so that the end user encounters the least amount of unintended errors as possible.\\\\
+This code, despite being rather simple, is fundamental to the solution as the other blocks of code all rely on a working camera feed. In the event that this is not possible, it is important to have a good fallback subroutine that still gives the end user lots of options. This is because the end user will not have access to the source code, and they likely are a novice computer user – they therefore both lack the skill and the tools required to debug the code and fix it themselves. As with most of the following sections, it is important to code for as many possibilities as possible, so that the end user encounters the least amount of unintended errors.\\\\
 The next stage relies on a library that can handle computer vision processing or similar features. For this purpose, I have chosen the python implementation of OpenCV. 
 Directly from the website, ``OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in the commercial products. Being a BSD-licensed product, OpenCV makes it easy for businesses to utilize and modify the code \cite{openCvAbout}”. The reason I have chosen this is due to the fact that it is not only a well-made library, but the documentation is immense and covers all areas in great detail. Absolutely everything I need to harness the functionality of this library can be obtained directly from the documentation which means I can spend less time learning to use the library, and more time coding a solution with the library. Despite making this choice, there are many more sub-choices within OpenCV which I will cover later in the relevant sections.
 The next stage is taking the camera feed and beginning to recognise faces within the feed. Any additional processing comes under its own subroutine in this case, and the face recogniser acts as a core functionality once again. For the face detection, I will be using a Haar based cascade classifier – this uses a series of positive and negative images in order to train a classifier (the object used to differentiate between faces and non-faces). For the purpose of saving time, I will be using a pre-trained face detection classifier that has been produced with a Haar-based methodology. Despite this, I do not think that this choice reduces the complexity of my solution due to the fact that the implementation of this Haar cascade is extremely similar to how the classifier would have been constructed regardless. Therefore, if I can correctly show an implementation of the Haar cascade in context of face detection and identification, I am also showing that I could construct the Haar cascade anyway – as the methodology is much the same.
 \begin{figure}[H]
 	\centering
-	\includegraphics{haarCascades.png}
+	\includegraphics[width=3in]{haarCascades.png}
 	\caption{Types of features detected by Haar Cascades \cite{haarImage}}\label{fig_haar}
 \end{figure}
 “A Haar feature considers adjacent rectangular regions at a specific location in a detection window, sums up the pixel intensities in each region and calculates the difference between these sums \cite{haarInformation}”. Due to this, the resolution of the incoming stream needs to be high enough in order to preserve fine details that will help the Haar cascade to classify a face. I will need to keep this in mind later when deciding the parameters for the incoming stream. The diagram on the right shows the sorts of features that a Haar cascade can detect; there are often tens of thousands of such features in one picture, and the datasets needed to construct a Haar cascade classifier from scratch are rather large, larger than the datasets needed to recognise faces at least.
