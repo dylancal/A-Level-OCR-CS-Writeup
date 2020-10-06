@@ -20,6 +20,7 @@
 \contentsline {section}{\numberline {9}The Iterative Development Process}{23}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{24}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV, face detection}{27}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Amendments}{28}{subsubsection.9.2.1}%
 \contentsline {section}{\numberline {10}Evaluation}{29}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Testing the product against our final criteria}{30}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Sucess of the solution}{31}{subsection.10.2}%
