@@ -11,5 +11,19 @@ class camera():
         self.obj_camera.set(4, self.width)
     def outputVideo(self):
         self.bool_working, self.cameraOutput = self.obj_camera.read()
-    
-   
+        return self.cameraOutput
+
+def cascadeDetction(obj_frame, obj_faceCascade):
+    matrix_faces = obj_faceCascade.detectMultiscale(
+        cv2.cvtColor(obj_frame, cv2.COLOR_BGR2GRAY), 
+        scaleFactor = 1.2, 
+        minNeighbors = 5,
+        minSize = (30, 30))
+    for (originX, originY, displacedX, displacedY) in matrix_faces:
+        cv2.rectangle(obj_frame,
+            (originX, originY),
+            (originX + displacedX, originY + displacedY),
+            (255, 255, 255),
+            4)
+            
+        
