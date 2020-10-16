@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  5 OCT 2020 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  16 OCT 2020 11:50
 entering extended mode
 **./document.tex
 (document.tex
@@ -839,7 +839,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--142
  []
 
 [4]
-<./figs/raspberryCables.png, id=173, 828.09375pt x 257.46187pt>
+<./figs/raspberryCables.png, id=178, 828.09375pt x 257.46187pt>
 File: ./figs/raspberryCables.png Graphic file (type png)
 <use ./figs/raspberryCables.png>
 Package pdftex.def Info: ./figs/raspberryCables.png  used on input line 154.
@@ -901,24 +901,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--317
  []
 
 [9]
-<./figs/designDecomposition.png, id=253, 1270.7475pt x 749.80125pt>
+<./figs/designDecomposition.png, id=258, 1270.7475pt x 749.80125pt>
 File: ./figs/designDecomposition.png Graphic file (type png)
 <use ./figs/designDecomposition.png>
 Package pdftex.def Info: ./figs/designDecomposition.png  used on input line 323
 .
 (pdftex.def)             Requested size: 332.44243pt x 196.15648pt.
-<./figs/flowOverview.png, id=255, 1340.00626pt x 778.40813pt>
+<./figs/flowOverview.png, id=260, 1340.00626pt x 778.40813pt>
 File: ./figs/flowOverview.png Graphic file (type png)
 <use ./figs/flowOverview.png>
 Package pdftex.def Info: ./figs/flowOverview.png  used on input line 332.
 (pdftex.def)             Requested size: 448.07378pt x 260.28433pt.
  [10 <./figs/designDecomposition.png> <./figs/flowOverview.png>]
-<./figs/flowCameraworking.png, id=262, 278.54062pt x 198.7425pt>
+<./figs/flowCameraworking.png, id=267, 837.1275pt x 589.4522pt>
 File: ./figs/flowCameraworking.png Graphic file (type png)
 <use ./figs/flowCameraworking.png>
 Package pdftex.def Info: ./figs/flowCameraworking.png  used on input line 349.
-(pdftex.def)             Requested size: 278.53993pt x 198.742pt.
-<./figs/haarCascades.png, id=264, 321.2pt x 272.01625pt>
+(pdftex.def)             Requested size: 289.07999pt x 203.55011pt.
+<./figs/haarCascades.png, id=270, 321.2pt x 272.01625pt>
 File: ./figs/haarCascades.png Graphic file (type png)
 <use ./figs/haarCascades.png>
 Package pdftex.def Info: ./figs/haarCascades.png  used on input line 358.
@@ -929,7 +929,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--360
  []
 
 [11 <./figs/flowCameraworking.png>]
-<./figs/lbphRecognition.png, id=283, 303.38344pt x 105.39375pt>
+<./figs/lbphRecognition.png, id=290, 303.38344pt x 105.39375pt>
 File: ./figs/lbphRecognition.png Graphic file (type png)
 <use ./figs/lbphRecognition.png>
 Package pdftex.def Info: ./figs/lbphRecognition.png  used on input line 398.
@@ -940,7 +940,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--400
  []
 
 [12 <./figs/haarCascades.png>] [13 <./figs/lbphRecognition.png>]
-<./figs/facialRecognitionIdentify.png, id=347, 1408.51219pt x 773.89125pt>
+<./figs/facialRecognitionIdentify.png, id=354, 1408.51219pt x 773.89125pt>
 File: ./figs/facialRecognitionIdentify.png Graphic file (type png)
 <use ./figs/facialRecognitionIdentify.png>
 Package pdftex.def Info: ./figs/facialRecognitionIdentify.png  used on input li
@@ -955,13 +955,13 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 471.
 
-<./figs/webserverWhole.png, id=351, 998.22937pt x 636.87938pt>
+<./figs/webserverWhole.png, id=357, 998.22937pt x 636.87938pt>
 File: ./figs/webserverWhole.png Graphic file (type png)
 <use ./figs/webserverWhole.png>
 Package pdftex.def Info: ./figs/webserverWhole.png  used on input line 478.
 (pdftex.def)             Requested size: 346.89621pt x 221.31737pt.
 [14 <./figs/facialRecognitionIdentify.png>]
-<./figs/webserverExtended.png, id=385, 986.18437pt x 513.41812pt>
+<./figs/webserverExtended.png, id=391, 986.18437pt x 513.41812pt>
 File: ./figs/webserverExtended.png Graphic file (type png)
 <use ./figs/webserverExtended.png>
 Package pdftex.def Info: ./figs/webserverExtended.png  used on input line 485.
@@ -971,183 +971,214 @@ Underfull \hbox (badness 10000) in paragraph at lines 481--487
 
  []
 
+<figs/meme.png, id=395, 501.875pt x 704.6325pt>
+File: figs/meme.png Graphic file (type png)
+<use figs/meme.png>
+Package pdftex.def Info: figs/meme.png  used on input line 507.
+(pdftex.def)             Requested size: 289.07999pt x 405.89168pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--503
+Underfull \hbox (badness 10000) in paragraph at lines 501--510
 
  []
 
-[15 <./figs/webserverWhole.png> <./figs/webserverExtended.png>] [16] [17]
-Underfull \hbox (badness 2790) in paragraph at lines 555--555
+[15 <./figs/webserverWhole.png> <./figs/webserverExtended.png>] [16 <./figs/mem
+e.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 536--536
+[]|\OT1/cmr/m/n/10 The im-ages that come trough
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 536--536
+\OT1/cmr/m/n/10 obj[]stream, not the cam-era it-self
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 536--536
+[]|\OT1/cmr/m/n/10 Validation needed upon data en-try,
+ []
+
+[17]
+Underfull \hbox (badness 2790) in paragraph at lines 564--564
 []|\OT1/cmr/m/n/10 Ensure that the Pi re-ceives
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 555--555
+Underfull \hbox (badness 1297) in paragraph at lines 564--564
 []|\OT1/cmr/m/n/10 We will be ac-cess-ing the Pi
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 555--555
+Underfull \hbox (badness 2865) in paragraph at lines 564--564
 []|\OT1/cmr/m/n/10 Ensure that OpenCV is in-
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 555--555
+Underfull \hbox (badness 3525) in paragraph at lines 564--564
 \OT1/cmr/m/n/10 OpenCV, we must there-fore
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--570
+
  []
 
 [18]
 
-LaTeX Warning: \verb may be unreliable inside tabularx on input line 598.
+LaTeX Warning: \verb may be unreliable inside tabularx on input line 608.
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 598--598
+Underfull \hbox (badness 4144) in paragraph at lines 608--608
 []|\OT1/cmr/m/n/10 Bounding box drawn around
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 598--598
+Underfull \hbox (badness 2409) in paragraph at lines 608--608
 \OT1/cmr/m/n/10 are de-tected, whilst all non-
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 598--598
+Underfull \hbox (badness 1924) in paragraph at lines 608--608
 []|\OT1/cmr/m/n/10 Running the code that takes
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 598--598
+Underfull \hbox (badness 2680) in paragraph at lines 608--608
 \OT1/cmr/m/n/10 snap-shots of faces and saves
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 598--598
+Underfull \hbox (badness 1248) in paragraph at lines 608--608
 []|\OT1/cmr/m/n/10 The file-names of the cropped
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 598--598
+Underfull \hbox (badness 2126) in paragraph at lines 608--608
 []|\OT1/cmr/m/n/10 The num-ber of pho-tos saved
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 598--598
+Underfull \hbox (badness 1033) in paragraph at lines 608--608
 \OT1/cmr/m/n/10 send a mes-sage to my phone
  []
 
 [19]
-Underfull \hbox (badness 6658) in paragraph at lines 615--615
+Underfull \hbox (badness 6658) in paragraph at lines 625--625
 []|\OT1/cmr/m/n/10 This should start tak-ing pho-tos
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 616--618
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
 [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 687--692
+Underfull \hbox (badness 10000) in paragraph at lines 680--685
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--692
+Underfull \hbox (badness 10000) in paragraph at lines 680--685
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--692
+Underfull \hbox (badness 10000) in paragraph at lines 680--685
 
  []
 
-<./figs/flowTesting.png, id=443, 862.72313pt x 450.18187pt>
+<./figs/flowTesting.png, id=451, 862.72313pt x 450.18187pt>
 File: ./figs/flowTesting.png Graphic file (type png)
 <use ./figs/flowTesting.png>
-Package pdftex.def Info: ./figs/flowTesting.png  used on input line 701.
+Package pdftex.def Info: ./figs/flowTesting.png  used on input line 694.
 (pdftex.def)             Requested size: 433.62pt x 226.26501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--703
+Underfull \hbox (badness 10000) in paragraph at lines 691--696
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--703
+Underfull \hbox (badness 10000) in paragraph at lines 691--696
 
  []
 
 [23 <./figs/flowTesting.png>]
-<./figs/raspberryPi.jpg, id=455, 1003.75pt x 679.53876pt>
+<./figs/raspberryPi.jpg, id=463, 1003.75pt x 679.53876pt>
 File: ./figs/raspberryPi.jpg Graphic file (type jpg)
 <use ./figs/raspberryPi.jpg>
-Package pdftex.def Info: ./figs/raspberryPi.jpg  used on input line 721.
+Package pdftex.def Info: ./figs/raspberryPi.jpg  used on input line 714.
 (pdftex.def)             Requested size: 289.07999pt x 195.70287pt.
-<./figs/raspberryPiBoot.png, id=461, 663.47874pt x 419.5675pt>
+<./figs/raspberryPiBoot.png, id=469, 663.47874pt x 419.5675pt>
 File: ./figs/raspberryPiBoot.png Graphic file (type png)
 <use ./figs/raspberryPiBoot.png>
-Package pdftex.def Info: ./figs/raspberryPiBoot.png  used on input line 751.
+Package pdftex.def Info: ./figs/raspberryPiBoot.png  used on input line 744.
 (pdftex.def)             Requested size: 289.07999pt x 182.80487pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--753
+Underfull \hbox (badness 10000) in paragraph at lines 738--746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--753
+Underfull \hbox (badness 10000) in paragraph at lines 738--746
 
  []
 
 [24 <./figs/raspberryPi.jpg>]
 
-LaTeX Warning: Reference `fig_vncDesktop' on page 25 undefined on input line 75
-5.
+LaTeX Warning: Reference `fig_vncDesktop' on page 25 undefined on input line 74
+8.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--759
+Underfull \hbox (badness 10000) in paragraph at lines 747--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--759
+Underfull \hbox (badness 10000) in paragraph at lines 747--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--776
+Underfull \hbox (badness 10000) in paragraph at lines 747--752
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 765--769
 
  []
 
 [25 <./figs/raspberryPiBoot.png>]
-Underfull \hbox (badness 1043) in paragraph at lines 793--793
+Underfull \hbox (badness 1043) in paragraph at lines 786--786
 \OT1/cmr/m/n/10 the LED lights on the board
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 793--793
+Underfull \hbox (badness 2310) in paragraph at lines 786--786
 []|\OT1/cmr/m/n/10 Attempt to con-nect to VNC
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 786--786
 []|\OT1/cmr/m/n/10 The ver-sion was
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 786--786
 \OT1/cmr/m/n/10 XXXXXXXXXX, which is
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 793--793
+Underfull \hbox (badness 1924) in paragraph at lines 786--786
 []|\OT1/cmr/m/n/10 The ver-sion was less than 3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 780--796
+Underfull \hbox (badness 10000) in paragraph at lines 773--789
 
  []
 
@@ -1156,7 +1187,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 780--796
 ty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [27]
-Underfull \hbox (badness 10000) in paragraph at lines 871--885
+Underfull \hbox (badness 10000) in paragraph at lines 864--878
 
  []
 
@@ -1171,37 +1202,31 @@ ov / learn-[]about-[]eye-[]health /
 \tf@lof=\write5
 \openout5 = `document.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 990.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 983.
  [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 990.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 983.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 990.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 990.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 983.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 983.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 4AAA3899C3167982C8F10AEA9B249E53;2329.
 
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: 9E16EDFA38493010535F3D6759BAAAD8;2259
-(rerunfilecheck)             After:  4AAA3899C3167982C8F10AEA9B249E53;2329.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 990.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 983.
  ) 
 Here is how much of TeX's memory you used:
- 15388 strings out of 481199
- 270036 string characters out of 2903719
- 899468 words of memory out of 3000000
- 30421 multiletter control sequences out of 15000+200000
+ 15401 strings out of 481199
+ 270215 string characters out of 2903719
+ 898572 words of memory out of 3000000
+ 30430 multiletter control sequences out of 15000+200000
  547213 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,12n,46p,1201b,1315s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,46p,1197b,1315s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\vi19DCall\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
 tcrm1000.pk><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/font
@@ -1223,9 +1248,9 @@ c/amsfonts/cm/cmsy9.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vi19DCall/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vi19DCall/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on document.pdf (36 pages, 1338317 bytes).
+Output written on document.pdf (36 pages, 1481858 bytes).
 PDF statistics:
- 738 PDF objects out of 1000 (max. 8388607)
- 306 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 748 PDF objects out of 1000 (max. 8388607)
+ 307 named destinations out of 1000 (max. 500000)
+ 298 words of extra memory for PDF output out of 10000 (max. 10000000)
 

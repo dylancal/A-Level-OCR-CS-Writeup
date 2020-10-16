@@ -346,7 +346,7 @@ except AssertionError:
 \end{lstlisting}
 \begin{figure}[H]
 	\centering
-	\includegraphics{flowCameraworking.png}
+	\includegraphics[width=4in]{flowCameraworking.png}
 	\caption{Flowchart that shows the try and except syntax for the camera validation}\label{fig_cameraWorking}
 \end{figure}
 This code, despite being rather simple, is fundamental to the solution as the other blocks of code all rely on a working camera feed. In the event that this is not possible, it is important to have a good fallback subroutine that still gives the end user lots of options. This is because the end user will not have access to the source code, and they likely are a novice computer user – they therefore both lack the skill and the tools required to debug the code and fix it themselves. As with most of the following sections, it is important to code for as many possibilities as possible, so that the end user encounters the least amount of unintended errors.\\\\
@@ -496,10 +496,19 @@ if __name__ == '__main__':
 \end{lstlisting}
 For example, setting
 \begin{lstlisting}
-URL = '\'
+URL = '/'
 \end{lstlisting}
-And navigating to \texttt{http://localhost:5000/} (the default port) will return \texttt{`Hello World!'}. Perfect! We now would have a working web-server to put the required elements on. Importing \texttt{Flask} settings as shown in the cylinder flowchart element would allow us to change the default port along with many other settings. This may be useful as we may want to set the options differently than the default. Inside the \texttt{def tester()} is where we would place items such as buttons and the video frame. To do this, I will be importing \texttt{templates} from the \texttt{Flask} library also. This allows us to load a \texttt{HTML} page to show for that particular \texttt{@app.route} (URL) instead of coding it all within the Python code itself. The style of the buttons can then be made and applied with some simple \texttt{CSS} in order to make it clear. \\To add to the success criteria that govern clarity of the webpage, the most common form of colour-blindness affects the ability to perceive the differences in red-green colour spaces\cite{colourBlindness}. Therefore, the buttons must not rely solely on colour as mentioned previously.\\\\
+Would allow us to navigate to \texttt{http://localhost:5000/} (the default port) will return \texttt{`Hello World!'}. Perfect! We now would have a working web-server to put the required elements on.\\
+Importing \texttt{Flask} settings as shown in the cylinder flowchart element would allow us to change the default port along with many other settings. This may be useful as we may want to set the options differently than the default. Inside \texttt{def tester()} is where we would place items such as buttons and the video frame. To do this, I will be importing \texttt{templates} from the \texttt{Flask} library also. This allows us to load a \texttt{HTML} page to show for that particular \texttt{@app.route} (URL) instead of coding it all within the Python code itself. The style of the buttons can then be made and applied with some simple \texttt{CSS} in order to make it clear. \\
+Considering the success criteria that govern clarity of the webpage, the most common form of colour-blindness affects the ability to perceive the differences in red-green colour spaces\cite{colourBlindness}. Therefore, the buttons must not rely solely on colour as mentioned previously - this is an example of ensuring that our solution is applicable for as many stakeholders as possible.\\\\
 This covers most of the design of the solution. During the iterative development phase it is likely that I will encounter additional nuances and problems that need to be overcome. These will be debugged, the solutions designed and the problems fixed at the stages I encounter them.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4in]{figs/meme}
+	\caption{A meme, applicable}
+	\label{fig:meme}
+\end{figure}
+
 		
 \newpage
 \subsubsection{Identifying key variables, objects, and data structures}
@@ -508,22 +517,22 @@ This covers most of the design of the solution. During the iterative development
 	\centering
 	\rowcolors{3}{tableShade}{white}
 	\begin{tabularx}{\textwidth}{llXX}
-		\textbf{Variable Name} & \textbf{Data Type} & \textbf{Use of the Variable}                                                                                                                      & \textbf{Validation Needed (If Applicable)}                                                                                              \\ \midrule
-		str\_cascadePath       & String             & Stores the path of the Haar Cascade used for recognising a face                                                                                   & No validation needed (Developer)                                                                                                        \\
-		obj\_faceCascade       & Object             & The CV2 object that contains the Haar Cascade, called in order to recognise a face                                                                & No validation needed (Developer)                                                                                                        \\
-		str\_datasetPath       & String             & The path to the dataset that stores the faces                                                                                                     & No validation needed (Developer)                                                                                                        \\
-		obj\_stream            & Object             & The camera, as an object. This is separate from the video feed from the camera                                                                    & No validation needed (Developer)                                                                                                        \\
-		obj\_videoFeed         & Object             & The images that come trough obj\_stream, not the camera itself but the resulting images that we need to work with                                 & No validation needed (Developer)                                                                                                        \\
-		str\_recogniserPath    & String             & The path to the trained file that contains the instructions for recognising faces                                                                 & No validation needed (Developer)                                                                                                        \\
-		obj\_recogniser        & Object             & The CV2 object that is called to identify a particular face, uses the trained file in str\_recogniserPath                                         & No validation needed (Developer)                                                                                                        \\
-		int\_id                & Integer            & Keeps track of which set of images belongs to which person. This can be seen as a UID as it eliminates the problems with duplicate names          & No validation except for when the user inputs an ID for dataset collection. Validation is that it must be an integer \\
-		obj\_font              & Object             & The font used when writing text with CV2                                                                                                          & No validation needed (Developer)                                                                                                        \\
-		real\_minWidth         & Real (Float)       & The minimum dimensions for the Haar cascade when trying to scale the face to compare. Useful for eliminating false positives of very small images & No validation needed (Developer)                                                                                                        \\
-		real\_minHeight        & Real (Float)       & The minimum dimensions for the Haar cascade when trying to scale the face to compare. Useful for eliminating false positives of very small images & No validation needed (Developer)                                                                                                        \\
-		arr\_names             & Array              & The list of names, this can be loaded from a file such as a CSV file that is maintained by Python                                                 & No validation needed (Developer)                                                                                                        \\
-		real\_confidence       & Real (Float)               & This is the measure of confidence received from the CV2 recogniser                                                                                & No validation needed (Developer)                                                                                                        \\
-		&                    &                                                                                                                                                   & No validation needed (Developer)                                                                                                        \\[0.5cm] 
-		&                    &                                                                                                                                                   & No validation needed (Developer)                                                                                                        \\ \hline
+		\textbf{Variable Name} & \textbf{Data Type} & \textbf{Use of the Variable}                                                                                                                      & \textbf{Validation Needed (If Applicable)}                                                                           \\ \midrule
+		str\_cascadePath       & VAR String         & Stores the path of the Haar Cascade used for recognising a face                                                                                   & No validation needed (Developer)                                                                                     \\
+		str\_datasetPath       & VAR String         & The path to the dataset that stores the faces                                                                                                     & No validation needed (Developer)                                                                                     \\
+		str\_recogniserPath    & VAR String         & The path to the trained file that contains the instructions for recognising faces                                                                 & No validation needed (Developer)                                                                                     \\
+		obj\_faceCascade       & INS Object         & The CV2 object that contains the Haar Cascade, called in order to recognise a face                                                                & No validation needed (Developer)                                                                                     \\
+		obj\_faceRecogniser    & INS Object         & The CV2 object that is called to identify a particular face, uses the trained file in str\_recogniserPath                                         & No validation needed (Developer)                                                                                     \\
+		obj\_stream            & INS Object         & The camera, as an object. This is separate from the video feed from the camera                                                                    & No validation needed (Developer)                                                                                     \\
+		obj\_videoFeed         & INS Object         & The images that come trough obj\_stream, not the camera itself but the resulting images that we need to work with                                 & No validation needed (Developer)                                                                                     \\
+		int\_id                & VAR Integer        & Keeps track of which set of images belongs to which person. This can be seen as a UID as it eliminates the problems with duplicate names          & No validation except for when the user inputs an ID for dataset collection. Validation is that it must be an integer \\
+		val\_font              & VAR Object         & The font used when writing text with CV2                                                                                                          & No validation needed (Developer)                                                                                     \\
+		real\_minWidth         & VAR Real           & The minimum dimensions for the Haar cascade when trying to scale the face to compare. Useful for eliminating false positives of very small images & No validation needed (Developer)                                                                                     \\
+		real\_minHeight        & VAR Real           & The minimum dimensions for the Haar cascade when trying to scale the face to compare. Useful for eliminating false positives of very small images & No validation needed (Developer)                                                                                     \\
+		arr\_names             & VAR Array          & The list of names, this can be loaded from a file such as a CSV file that is maintained by Python                                                 & No validation needed (Developer)                                                                                     \\
+		real\_confidence       & VAR Real (Float)   & This is the measure of confidence received from the CV2 recogniser                                                                                & No validation needed (Developer)                                                                                     \\
+		person()                 & OBJ Object         & Stores the data for people, each person has attributes such as a name and ID                                                                      & Validation needed upon data entry, names mustn't have numbers and etc                                                \\[0.5cm]
+		                       &                    &                                                                                                                                                   & No validation needed (Developer)                                                                                     \\ \hline
 	\end{tabularx}
 	\caption{A table identifying the key variables, objects, and data structures with justification}
 	\label{tab_keyItems}
@@ -556,7 +565,8 @@ In the table above, we can see the switch case and Hungarian notation at work --
 	\caption{A table showing the tests performed on the device, with justification}
 	\label{tab_testingDesignDevice}
 \end{table}
-Once these tests are complete, we can say that the device is ready to start being used to develop the solution on --  all the necessary components and dependencies are now there. The next stage is now working out a testing frame for the solution. This is a much larger task due to the scale of the solution and the immense amount of work needed to process and perform each test on each component
+Once these tests are complete, we can say that the device is ready to start being used to develop the solution on --  all the necessary components and dependencies are now there. The next stage is now working out a testing frame for the solution. This is a much larger task due to the scale of the solution and the immense amount of work needed to process and perform each test on each component.\\\\
+Whilst this stage of testing is not as important as the next, I have included it for absolute clarity on the setup of the device. After all, a solution can be not constructed on a device that does not work properly.
 
 \newpage
 \subsubsection{Testing the solution}
@@ -614,24 +624,6 @@ The sub-testing for the buttons is shown in the table below
 	\caption{A table showing the tests performed to ensure buttons work as intended}\label{tab_testingDesignButtons}
 \end{tabularx}
 If all of these tests pass at the time of testing, then \textbf{(22)} can also be passed from the main testing table.\\\\
-Once all tests are complete and the solution has been finished \textit{i.e.} one stage from production/deployment, we can then move on to the final testing frame. This ensures one last time that the components work and most importantly, ensures that they work well together to form the final product.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -645,6 +637,7 @@ Once all tests are complete and the solution has been finished \textit{i.e.} one
 
 \newpage
 \subsubsection{Final Testing}
+Final testing is the testing frame that will be used once we have what we think is the `final' product. This set of testing will test all functions of the program and check for any errors, logical or otherwise. It is also vital to ensure that any validation is implemented correctly -- the program needs to mitigate any mis-entry by the end-user as much as possible.
 \begin{table}[H]
 	\centering
 	\rowcolors{3}{tableShade}{white}
@@ -897,7 +890,7 @@ The testing for this section is outlined below
 	\label{tab_testingCameraTest}
 \end{table}
 \subsubsection{Amendments}
-Following the previous testing and the comparison to the success criteria, we can attempt to make amendments to the code in order to improve and get back to what the original solution indented. This shows us how we are keeping the development cycle iterative.
+Following the previous testing and the comparison to the success criteria, we can attempt to make amendments to the code in order to improve and get back to what the original solution indented. This is an example of us following an iterative development process.
 
 
 
