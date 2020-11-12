@@ -34,11 +34,13 @@
 \usepackage{listings}
 \usepackage[sharp]{easylist}
 \usepackage{enumitem}
+\lstset{escapeinside={<@}{@>}}
 \lstset{breaklines=true}
 \lstset{basicstyle=\fontsize{9}{10}\ttfamily, keywordstyle=\fontsize{9}{10}\rmfamily\bfseries}
 \lstset{framesep=5pt}
 \lstset{tabsize=4}
 \lstset{numbers=left}
+\lstset{columns=flexible}
 
 \lstset{xleftmargin=2em}
 \usepackage{mathtools}
@@ -114,12 +116,26 @@ My project is suited towards anyone over the age of 16 and/or a homeowner with t
 In terms of real stakeholders who can help me to test the system, I have a family friend and also a teacher\footnote{Not from the Computer Science department} to give me feedback. Choosing these two different categories of people helps me to cover many advantages. Whilst the teacher may be busy, for example, the family friend should be more likely to be free. Moreover, whilst the family friend may give biased feedback, the teacher should give a more nuanced, unbiased opinion about the workings of the project.
 
 \section{Research into similar problems and their solutions}\label{sec_research}
-A similar problem to mine would be the Ring doorbell system which connects to a Wi-Fi hotspot within a home and allows the homeowner to stream video from the doorbell at any time. This product also informs the owner, via notification, when someone has arrived at the door. Both of these ideas will be incorporated in a similar fashion in my own solution. In contrast to the intended openness of my product, the Ring doorbell does not allow users to add people to a whitelist and it does not allow users to store footage or screenshots locally – it must be kept on Amazon servers. The relationship between Amazon and the government (in terms of law enforcement) is not crystal clear so it is currently a grey area on how your data might be used – especially with (at least some of) the UK leaving the European Union which could allow for data protection and privacy laws to be overhauled to a large degree.\\\\
-Data taken from a survey of 10 potential users of the product showed that 70\% were unhappy that they could not locally keep photos or videos from the device. In spite of this, I will ensure that my solution allows the end-user to keep this data locally.\\\\
-As mentioned in the introduction, whilst I fundamentally disagree with the use of facial recognition be it by the government or a large company, I would rather a small home user have the power to use it for their own good rather than the good of large multi-national corporations, the farming of data is now widespread across the globe. Even if you never ever use a service such as Facebook, in this day and age it is probable that they know who you are or have data on you at the very least. With that, my project will differ as it allows for centralised storage of recorded and cached footage that can be modified at any time by the user, kept on a device within the LAN of the router and firewalled to prevent outside contact (unless remote access is enabled. This is, once again, the users choice). My project will also have to comply with the same data protection laws surrounding biometric data in order to keep the user(s) of the product safe just as any system using biometric data must comply with data protection laws.\\\\
+A similar problem to mine would be the Ring doorbell system which connects to a Wi-Fi hotspot within a home and allows the homeowner to stream video from the doorbell at any time. This product also informs the owner, via notification, when someone has arrived at the door. Both of these ideas will be incorporated in a similar fashion in my own solution. In contrast to the intended openness of my product, the Ring doorbell does not allow users to add people to a whitelist and it does not allow users to store footage or screenshots locally – it must be kept on Amazon servers. The relationship between Amazon and the government (in terms of law enforcement) is not crystal clear so it is currently a grey area on how your data might be used – especially with (at least some of) the UK leaving the European Union which could allow for data protection and privacy laws to be overhauled to a large degree.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9in]{figs/ringDoorbell}
+	\caption{The Ring Doorbell developed by Amazon}
+	\label{fig:ringdoorbell}
+\end{figure}
+
+Data taken from a survey\footnote{This survey was created by me and given to people that I know} of 10 potential users of the product showed that 70\% were unhappy that they could not locally keep photos or videos from the device. In spite of this, I will ensure that my solution allows the end-user to keep this data locally.\\\\
+As mentioned in the introduction, whilst I fundamentally disagree with the use of facial recognition be it by the government or a large company, I would rather a small home user have the power to use it for their own good rather than the good of large multi-national corporations, the farming of data is now widespread across the globe. Even if you never ever use a service such as Facebook, in this day and age it is probable that they know who you are or have data on you at the very least. With that, my project will differ as it allows for centralised storage of recorded and cached footage that can be modified at any time by the user, kept on a device within the LAN of the router and firewalled to prevent outside contact (unless remote access is enabled -- this is, once again, the users choice). My project will also have to comply with the same data protection laws surrounding biometric data in order to keep the user(s) of the product safe just as any system using biometric data must comply with data protection laws.\\\\
 Another product with a similar theme to mine is the Nest Hello doorbell offered by google. This is much like the Ring doorbell with live streaming of a camera and the offer of continuous recording. Yet another similarity is that data is held on storage in the cloud as opposed to locally – leaving the end-user with less control over their data. It is especially with the biometric and other sensitive data types that I would like complete control over how my data is used and how the data of other people who consent to using the product is used. Unlike the Ring though, the Nest Hello doorbell must be a wired connection – a feature that could make installation harder.\\\\
-Many doorbell-based security products that I have researched require a subscription service of some sort in order to access all the features of the security system. This means that the price you pay for the product is not the final price and many people likely will not know this until they have purchased the product and it is too late to go back. Data collected from the same survey as previously showed that 90\% of people disagreed with paying a subscription to use the device, even after purchasing the device itself. From this, I understand that it will be preferable to have a set price with no subscription to use all of the features of the device. \\
-The final product that I researched was very similar to a few aspects of my own, the product can be seen in this\cite{techradarProduct} article by Techradar. This solution uses MotioneyeOS in order to stream video from the Raspberry Pi camera to a webpage accessible by devices on the network via the browser. There is a reasonably simple control panel for controlling settings and configuring devices. Rather handily, there is an option to upload recorded files straight to many popular cloud storage services such as Google Drive and Dropbox, something I may consider adding in the future as it is very convenient for the end user.\\\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=2.4in]{figs/nestHello}
+	\caption{The 'Nest Hello' doorbell, offered by Google}
+	\label{fig:nesthello}
+\end{figure}
+
+Many doorbell-based security products that I have researched require a subscription service of some sort in order to access all the features of the security system. This means that the price you pay for the product is not the final price and many people likely will not know this until they have purchased the product and it is too late to go back. Data collected from the same survey as previously showed that 90\% of people disagreed with paying a subscription to use the device, even after purchasing the device itself. From this, I understand that it will be preferable to have a set price with no subscription to use all of the features of the device. \\\\
+The final product that I researched was very similar to a few aspects of my own intended solution, the product can be seen in this\cite{techradarProduct} article by Techradar. This solution uses MotioneyeOS in order to stream video from the Raspberry Pi camera to a webpage accessible by devices on the network via the browser. There is a reasonably simple control panel for controlling settings and configuring devices. Rather handily, there is an option to upload recorded files straight to many popular cloud storage services such as Google Drive and Dropbox, something I may consider adding in the future as it is very convenient for the end user. Despite this, there is no facial recognition present in this product whereas in mine, it is the absolute core of the product.\\\\
 I hope to take the best from these existing similar projects and improve on places where they have perhaps fallen short. Some things, such as battery connectivity, may be a little too far-fetched for my limited budget though – these are not affected by code however, and could easily be added at any point of the project as a simple hardware change. Unlike both the Ring and the Nest Hello doorbells, I will ensure all files such as captured images stay local and free for the end-user. There will be no cloud subscription plans and the price paid for the product is the final price, all the features available will be usable as soon as it is installed, no extra fees. 
 
 
@@ -801,51 +817,60 @@ For the next sections to work, we must generate some code that allows us to get 
 I began with the following code in Python, comments are attached to the side and underneath certain lines for explanation.
 \begin{lstlisting}[language=Python]
 import cv2 
-# import the OpenCV library used for facial recognition into our code, we can then call all functions in this library
+<@\texttt{\textcolor{red}{\# import the OpenCV library used for facial recognition into our code, we can then call all functions in this library}}@>
 str_cascadePath =  'Cascades/haarcascade_frontalface_default.xml'
-# this file was taken directly from the OpenCV GitHub repo
-obj_faceCascade = cv2.CascadeClassifier(str_cascadePath) 
-# create a classifier object that is used to identify faces, we will be using the cascade that str_cascadePath points to
-obj_stream = cv2.VideoCapture(1) 
-# access the NoIR by creating an OpenCV object that uses the camera
+<@\texttt{\textcolor{red}{\# this file was taken directly from the OpenCV GitHub repo}}@>
+obj_faceCascade = cv2.CascadeClassifier(str_cascadePath)
+<@\texttt{\textcolor{red}{\# create a classifier object that is used to identify faces using the cascade that str\_cascadePath points to}}@> 
+obj_stream = cv2.VideoCapture(1)
+<@\texttt{\textcolor{red}{\# access the NoIR by creating an OpenCV object that uses the camera}}@> 
 obj_stream.set(3,800) 
 obj_stream.set(4,600)
-# set camera width and height (800x600)
-while True: 
-# this is a basic runtime loop, i am to change this when i add the web interface to call this as a function
+<@\texttt{\textcolor{red}{\# set camera width and height (800x600)}}@>
+
+while True:
+<@\texttt{\textcolor{red}{\# this is a basic runtime loop, i am to change this when i add the web interface to call this as a function}}@> 
 	bool_working, obj_videoFeed = obj_stream.read() 
-	# 
-	obj_videoFeed = cv2.flip(obj_videoFeed, -1) 
-	# my setup needs the camera to be flipped due to its placement
-	obj_videoFeedGray = cv2.cvtColor(obj_videoFeed, cv2.COLOR_BGR2GRAY) 
-	# create a grayscale version of the frames captured using the OpenCV conversion
-	faces = faceCascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5, minSize=(30, 30)) 
-	# calls the function to detect faces using the Haar Cascade, applied to the gray image
-	for (x,y,w,h) in faces: 
-		# for each face...
+	<@\texttt{\textcolor{red}{\# the boolean tells us if the videoFeed could be read correctly, and the other variable contains images from the camera}}@> 
+	obj_videoFeed = cv2.flip(obj_videoFeed, -1)
+	<@\texttt{\textcolor{red}{\# my setup needs the camera to be flipped due to its placement}}@> 
+	obj_videoFeedGray = cv2.cvtColor(obj_videoFeed, cv2.COLOR_BGR2GRAY)
+	<@\texttt{\textcolor{red}{\# create a grayscale version of the frames captured using the OpenCV conversion}}@> 
+	faces = faceCascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5, minSize=(30, 30))
+	<@\texttt{\textcolor{red}{\# calls the function to detect faces using the Haar Cascade, applied to the gray image}}@> 
+	for (x,y,w,h) in faces:
+		<@\texttt{\textcolor{red}{\# for each face...}}@> 
 		cv2.rectangle(imgout,(x,y),(x+w,y+h),(0,0,0), 1) 
-		# draw a black rectangle of thickness 1 as a bounding box around the face
-		img_gray = obj_videoFeedGray[y:y+h, x:x+w] 
-		# creates images of the face detected in greyscale and in color
-		img_color = obj_videoFeed[y:y+h, x:x+w] 
-		# ive added these now to be used later when saving photos of unknown people, just for testing at the moment
+		<@\texttt{\textcolor{red}{\# draw a black rectangle of thickness 1 as a bounding box around the face}}@>
+		img_gray = obj_videoFeedGray[y:y+h, x:x+w]
+		<@\texttt{\textcolor{red}{\# creates images of the face detected in greyscale and in color}}@> 
+		img_color = obj_videoFeed[y:y+h, x:x+w]
+		<@\texttt{\textcolor{red}{\# ive added these now to be used later when saving photos of unknown people, just for testing at the moment}}@> 
 	cv2.imshow('Input feed', obj_videoFeed) 
-	# creates a window and streams the input from the camera from the variable imgout
-	key_k = cv2.waitKey(10) & 0xff 
-	# continually updates the image as long as ESC isnt pressed
+	<@\texttt{\textcolor{red}{\# creates a window and streams the input from the camera from the variable imgout}}@>
+	key_k = cv2.waitKey(10) & 0xff
+	<@\texttt{\textcolor{red}{\# continually updates the image as long as ESC isnt pressed}}@> 
 	if key_k == 27:
-		# if ESC pressed
-		break 
-		# break on ESC
-stream.release() 
-# free the camera, keep the hardware and software (mainly memory) tidy, this prevents errors with the camera being in-use whilst we try to run the code
-cv2.destroyAllWindows() 
-# destroy the image window
+		<@\texttt{\textcolor{red}{\# if ESC pressed}}@>
+		break
+		<@\texttt{\textcolor{red}{\# break on ESC}}@> 
+stream.release()
+<@\texttt{\textcolor{red}{\# free the camera, keep the hardware and software (mainly memory) tidy, this prevents errors with the camera being in-use whilst we try to run the code}}@> 
+cv2.destroyAllWindows()
+<@\texttt{\textcolor{red}{\# destroy the image window}}@> 
+
 \end{lstlisting}
 When this code is ran, the following window pops up which shows the result of Haar detection.
-
-I will now explain what the code does in more detail than the comments allow. Starting on \textbf{[1]}, we import the OpenCV library. This is a necessary step in order to access the OpenCV functions and objects. We then move on to \textbf{[3]}, where we store the path to the downloaded Haar cascade for detecting faces to a variable for easy re-use; this links straight to \textbf{[5]} where we create a classifier object with OpenCV by using the Haar cascade we mentioned before. With this object, we can call functions that use the Haar cascade. On \textbf{[7, 9, 10]} we first define the \texttt{obj\_stream} variable and then set parameters. The choice of width and height parameters will affect the performance and detail of the resulting images -- higher resolutions provide much more clarity but are harder to work with and will produce a video stream with a lower fps. I think 600p is a good balance between quality and performance on a device such as the Pi. Although this will be tested at other resolutions later. \\
-Line \textbf{[12]} is the start of the main loop of the current program; the code generates images from the camera then scans these for faces using a Haar method. In \textbf{[14]}, we get two outputs from reading the stream with the OpenCV \texttt{.read()} function -- the boolean \texttt{bool\_working} is \texttt{True} if the \texttt{.read()} function successfully generates images from the camera and \texttt{False} otherwise. The second returned variable, \texttt{obj\_videoFeed} is the images that the camera generates -- each time the \texttt{.read()} function is called a new frame will be generated.\\
+\\
+---\\
+---\\
+---\\
+---\\
+---\\
+I will now explain what the code does in more detail than the comments allow.\\
+Starting on \textbf{[1]}, we import the OpenCV library. This is a necessary step in order to access the OpenCV functions and objects. We then move on to \textbf{[3]}, where we store the path to the downloaded Haar cascade for detecting faces to a variable for easy re-use; this links straight to \textbf{[5]} where we create a classifier object with OpenCV by using the Haar cascade we mentioned before. With this object, we can call functions that use the Haar cascade.\\
+On \textbf{[7, 9, 10]} we first define the \texttt{obj\_stream} variable and then set parameters. The choice of width and height parameters will affect the performance and detail of the resulting images -- higher resolutions provide much more clarity but are harder to work with and will produce a video stream with a lower fps. I think 600p is a good balance between quality and performance on a device such as the Pi. Although this will be tested at other resolutions later.\\\\
+Line \textbf{[12]} is the start of the main loop of the current program; the code generates images from the camera then scans these for faces using a Haar method. In \textbf{[14]}, we get two outputs from reading the stream with the OpenCV \texttt{.read()} function -- the boolean \texttt{bool\_working} is \texttt{True} if the \texttt{.read()} function successfully generates images from the camera and \texttt{False} otherwise. The second returned variable, \texttt{obj\_videoFeed} is the images that the camera generates -- each time the \texttt{.read()} function is called a new frame will be generated.\\\\
 It is important to understand the difference between \texttt{obj\_stream} and \texttt{obj\_videoFeed}, the former is the object that represents the camera as an input device whilst the latter contains the output images read from that input device.\	\
 On \textbf{[18]}, I define \texttt{obj\_videoFeedGray}, this uses the \texttt{.cvtColor()} function to change the colour of the frame captured. As a result, I now have both a color and a grayscale image of the frames produced by the camera. In \textbf{[20]}, the face cascade is used for the first time, we assign the output of the Haar detection algorithm to the variable faces. This is just a placeholder variable as all the information will be extracted soon after. The parameters defined within the \texttt{.detectMultiScale()} function will define how the Haar detection performs. The parameters are explained below
 \begin{table}[H]
