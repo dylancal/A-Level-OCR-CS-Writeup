@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  16 OCT 2020 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.21)  16 OCT 2020 11:57
 entering extended mode
 **./document.tex
 (document.tex
@@ -1202,14 +1202,14 @@ ov / learn-[]about-[]eye-[]health /
 \tf@lof=\write5
 \openout5 = `document.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 983.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 950.
  [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 983.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 950.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 983.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 983.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 950.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 950.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 4AAA3899C3167982C8F10AEA9B249E53;2329.
+(rerunfilecheck)             Checksum: 850C670671A893E5FC3E8D12940CD609;2330.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1217,13 +1217,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 983.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 950.
  ) 
 Here is how much of TeX's memory you used:
- 15401 strings out of 481199
- 270215 string characters out of 2903719
- 898572 words of memory out of 3000000
- 30430 multiletter control sequences out of 15000+200000
+ 15402 strings out of 481199
+ 270233 string characters out of 2903719
+ 899651 words of memory out of 3000000
+ 30431 multiletter control sequences out of 15000+200000
  547213 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,12n,46p,1197b,1315s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1248,9 +1248,9 @@ c/amsfonts/cm/cmsy9.pfb><C:/Users/vi19DCall/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vi19DCall/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vi19DCall/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on document.pdf (36 pages, 1481858 bytes).
+Output written on document.pdf (36 pages, 1482336 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
+ 749 PDF objects out of 1000 (max. 8388607)
  307 named destinations out of 1000 (max. 500000)
  298 words of extra memory for PDF output out of 10000 (max. 10000000)
 

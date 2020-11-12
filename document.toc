@@ -22,8 +22,8 @@
 \contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV, face detection}{27}{subsection.9.2}%
 \contentsline {subsubsection}{\numberline {9.2.1}Amendments}{28}{subsubsection.9.2.1}%
 \contentsline {section}{\numberline {10}Evaluation}{29}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Testing the product against our final criteria}{30}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Sucess of the solution}{31}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Describing the final product}{32}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.1}Describing the final product}{30}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Testing the product against our final criteria}{31}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Success of the solution}{32}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}Problems I encountered and what I would do in the future}{33}{subsection.10.4}%
 \contentsline {section}{Bibliography}{34}{subsection.10.4}%
