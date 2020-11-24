@@ -813,9 +813,10 @@ As all the tests needed for this section of construction have passed and that th
 
 
 \newpage
-\subsection{Getting a working video feed with OpenCV, face detection}
+\subsection{Getting a working video feed with OpenCV, face detection}\label{ssec_feed}
 For the next sections to work, we must generate some code that allows us to get a working image feed in Python. As we are using VNC and can see the desktop environment, it is sufficient to output the feed captured by OpenCV to a graphical window for now. Later on in the development after we move to the webpage, this will become deprecated and will be removed.
 
+\subsubsection{Development of code}
 I began with the following code in Python, comments are attached to the side and underneath certain lines for explanation.
 \begin{lstlisting}[language=Python]
 import cv2 
@@ -905,19 +906,30 @@ Comparing the code we have written to the success criteria. we can make the foll
 \end{table}
 Overall, we have adhered to the success criteria for this section pretty well. All the positive aspects can be carried forward whilst the negative aspect (bounding box clarity) can be worked on post-testing.\\
 The testing for this section is outlined below
-\begin{table}[H]
-	\centering
+\begin{table}[H]        
+	\centering             
 	\rowcolors{3}{tableShade}{white}
 	\begin{tabularx}{\textwidth}{lXXXl}
-		Test & \textbf{Test Data} & \textbf{Expected Outcome} & \textbf{Actual Outcome} & \textbf{Passed?} \\ \midrule
-		1    &                    &                  &                &         \\
-		14   &                    &                  &                &         \\ \bottomrule
+		Test & \textbf{Test Data}                                                                                  & \textbf{Expected Outcome} & \textbf{Actual Outcome} & \textbf{Passed?} \\
+		\midrule
+		1 & This portion of the code is ran as is, with no additions to it -- a face is present in the viewport & Haar cascade function (of \texttt{cv2} object) is evaluated, picking up that there is a face and then drawing a bounding box around the face as per the success criteria & The function is as expected, but the implementation conditions fail against the success criteria & True \\
+		2 & The same as above, but with no faces present in the viewport & The camera should still function and the viewport should still be visible with the addition that there is no bounding boxes in the image as there are no faces present. & As expected, the performance is notably better also & True   \\
+		3 & The same as \texttt{(1)} but with more than one face present in the viewport  & The function should still evaluate and the code should recognise that 3 faces exist -- drawing 3 separate bounding boxes for each face & As expected & True \\
+		4 & These tests are all ran for extended time (>20 minutes) and one fail fails the whole test & The solution only identifies the
+		human faces and that all faces
+		are detected, whilst all nonfaces are not regarded as candidates and no bounding boxes are
+		drawn & There are some false positives and negatives over a longer period of time, extensive testing on accuracy will be done later to amend this & False \\
+		\bottomrule
 	\end{tabularx}
 	\caption{A table showing the results of tests performed on the this section of the solution}
 	\label{tab_testingCameraTest}
 \end{table}
 \subsubsection{Amendments}
-Following the previous testing and the comparison to the success criteria, we can attempt to make amendments to the code in order to improve and get back to what the original solution indented. This is an example of us following an iterative development process.
+Following the previous testing and the comparison to the success criteria, we can attempt to make amendments to the code in order to improve and get back to what the original solution indented. This is an example of us following an iterative development process and improving on what we just constructed. \\\\
+For the thickness of the bounding box, the last parameter (1) on \texttt{[25]} was changed to (2) to  have the box drawn as two pixels thick. As well as this, the \texttt{RGB} value was changed from \texttt{(0,0,0)} to \texttt{(255, 255, 255)} as this makes the box easier to see.\\
+In terms of latency, I will be leaving this amendment until later as it is not absolutely essential -- it is also possible that changes I make would undo this amendment anyway so I will be waiting until later to try and fix the latency issues; once I have completed tests on latency after the recognition is added (this allows me to analyse the final results). \\
+Accuracy was a problem identified in \texttt{(4)}, I will complete further tests on accuracy and sustainability later as a result of picking up on this problem now. \\\\
+The later sections will not have all the extra padding explaining what the sections are about, they are only necessary in this first iteration to explain my method of writing my coursework and also the method of development. Now, only the subheadings and details are needed.
 
 
 
@@ -935,8 +947,44 @@ Following the previous testing and the comparison to the success criteria, we ca
 
 
 \newpage
+\subsection{Constructing code to take snapshots of faces in the viewport etc...}
+Following on from what we made previously in \S\ref{ssec_feed}, the most logical jump would now be to construct the code that takes care of dataset collection and management (or the fundamentals at least, which can be applied later and adapted as needed) collection\footnote{Pre-webpage functions}. \\
+This code will be similar to before, with some additions from other libraries to help me to take care of image handling from within Python. I have chosen libraries such as \texttt{pillow}\cite{} and \texttt{imutils}\cite{} to help me here, as they are well documented libraries with good documentation.
+\subsubsection{Development of code}
+I started the section by keeping the code generated before as is and attempting to simply add things to the code in order to moprh it as required. My way of saving a set number of photos of a face was to use a simple for loop (count controlled iteration) to sequentially save photos with different filenames which depend on the iterate. The pseudocode for this is as follows;
+\begin{lstlisting}
+count = 0
+while(True):
+	image = camera.output()
+	<@\texttt{\textcolor{myred}{\# Get the camera output}}@> 
+	gray = image.convertToGrayscale()
+	<@\texttt{\textcolor{myred}{\# Create a gray version for Haar usage}}@> 
+	faces = haarDetector.detectMultiScale()
+	<@\texttt{\textcolor{myred}{\# Use CV2 to detect the faces}}@> 
+	for face in faces:
+		image.drawRectangle(faceCoOrds) 
+		count += 1
+		<@\texttt{\textcolor{myred}{\# To take a set amount of photos}}@> 
+		cv2.imwrite("Dataset/User." + str(count) + ".jpg", gray[faceCoOrds])
+		cv2.imshow('image', image)
+		<@\texttt{\textcolor{myred}{\# Save each image to a specific folder with a filename that depends on which iterate the loop is at}}@> 
+	break.onEscape() 
+	<@\texttt{\textcolor{myred}{\# Press escape to exit the preview}}@> 
+	if count >= 100: 
+		<@\texttt{\textcolor{myred}{\# Take n face samples and stop the function}}@> 
+		break
+\end{lstlisting}
+The Python implementation may not be exactly as shown above, but I attempted to incorporate it here. The initial code I created can be seen in the screenshot below from the default Raspberry Python IDE 
+
+
+
+
+
+
+\newpage
 \section{Evaluation}
-Now that our solution is complete, we may look back at our original success criteria one final time -- comparing our previous idea to the final product and how it performed in tests
+Now that our solution is complete, we may look back at our original success criteria one final time -- comparing our previous idea to the final product and how it performed in tests.\\\\
+As shown by the results here, we have kept to the success criteria mostly as expected. Times that we did not keep to the success criteria were few compared to how well we kept to it. In the main, any breaches of criteria were amended and it was very rare to be not at all close to how we intended.
 
 
 \newpage
@@ -975,6 +1023,9 @@ We can assess to a point the success of the solution by comparing the results fr
 \newpage
 \listoffigures
 \end{document}
+
+%<@\texttt{\textcolor{myred}{\}}@> 
+
 %
 %\begin{table}[H]
 %	\centering
