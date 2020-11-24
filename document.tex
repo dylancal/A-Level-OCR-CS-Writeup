@@ -12,6 +12,7 @@
 }
 \setlength{\parindent}{0pt}
 \usepackage[table]{xcolor}
+\definecolor{myred}{RGB}{144,12,63}
 \definecolor{tableShade}{gray}{0.95}
 \usepackage[bottom]{footmisc}
 \usepackage{amssymb}
@@ -41,6 +42,7 @@
 \lstset{tabsize=4}
 \lstset{numbers=left}
 \lstset{columns=flexible}
+
 
 \lstset{xleftmargin=2em}
 \usepackage{mathtools}
@@ -817,47 +819,47 @@ For the next sections to work, we must generate some code that allows us to get 
 I began with the following code in Python, comments are attached to the side and underneath certain lines for explanation.
 \begin{lstlisting}[language=Python]
 import cv2 
-<@\texttt{\textcolor{red}{\# import the OpenCV library used for facial recognition into our code, we can then call all functions in this library}}@>
+<@\texttt{\textcolor{myred}{\# import the OpenCV library used for facial recognition into our code, we can then call all functions in this library}}@>
 str_cascadePath =  'Cascades/haarcascade_frontalface_default.xml'
-<@\texttt{\textcolor{red}{\# this file was taken directly from the OpenCV GitHub repo}}@>
+<@\texttt{\textcolor{myred}{\# this file was taken directly from the OpenCV GitHub repo}}@>
 obj_faceCascade = cv2.CascadeClassifier(str_cascadePath)
-<@\texttt{\textcolor{red}{\# create a classifier object that is used to identify faces using the cascade that str\_cascadePath points to}}@> 
+<@\texttt{\textcolor{myred}{\# create a classifier object that is used to identify faces using the cascade that str\_cascadePath points to}}@> 
 obj_stream = cv2.VideoCapture(1)
-<@\texttt{\textcolor{red}{\# access the NoIR by creating an OpenCV object that uses the camera}}@> 
+<@\texttt{\textcolor{myred}{\# access the NoIR by creating an OpenCV object that uses the camera}}@> 
 obj_stream.set(3,800) 
 obj_stream.set(4,600)
-<@\texttt{\textcolor{red}{\# set camera width and height (800x600)}}@>
+<@\texttt{\textcolor{myred}{\# set camera width and height (800x600)}}@>
 
 while True:
-<@\texttt{\textcolor{red}{\# this is a basic runtime loop, i am to change this when i add the web interface to call this as a function}}@> 
+<@\texttt{\textcolor{myred}{\# this is a basic runtime loop, i am to change this when i add the web interface to call this as a function}}@> 
 	bool_working, obj_videoFeed = obj_stream.read() 
-	<@\texttt{\textcolor{red}{\# the boolean tells us if the videoFeed could be read correctly, and the other variable contains images from the camera}}@> 
+	<@\texttt{\textcolor{myred}{\# the boolean tells us if the videoFeed could be read correctly, and the other variable contains images from the camera}}@> 
 	obj_videoFeed = cv2.flip(obj_videoFeed, -1)
-	<@\texttt{\textcolor{red}{\# my setup needs the camera to be flipped due to its placement}}@> 
+	<@\texttt{\textcolor{myred}{\# my setup needs the camera to be flipped due to its placement}}@> 
 	obj_videoFeedGray = cv2.cvtColor(obj_videoFeed, cv2.COLOR_BGR2GRAY)
-	<@\texttt{\textcolor{red}{\# create a grayscale version of the frames captured using the OpenCV conversion}}@> 
+	<@\texttt{\textcolor{myred}{\# create a grayscale version of the frames captured using the OpenCV conversion}}@> 
 	faces = faceCascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5, minSize=(30, 30))
-	<@\texttt{\textcolor{red}{\# calls the function to detect faces using the Haar Cascade, applied to the gray image}}@> 
+	<@\texttt{\textcolor{myred}{\# calls the function to detect faces using the Haar Cascade, applied to the gray image}}@> 
 	for (x,y,w,h) in faces:
-		<@\texttt{\textcolor{red}{\# for each face...}}@> 
+		<@\texttt{\textcolor{myred}{\# for each face...}}@> 
 		cv2.rectangle(imgout,(x,y),(x+w,y+h),(0,0,0), 1) 
-		<@\texttt{\textcolor{red}{\# draw a black rectangle of thickness 1 as a bounding box around the face}}@>
+		<@\texttt{\textcolor{myred}{\# draw a black rectangle of thickness 1 as a bounding box around the face}}@>
 		img_gray = obj_videoFeedGray[y:y+h, x:x+w]
-		<@\texttt{\textcolor{red}{\# creates images of the face detected in greyscale and in color}}@> 
+		<@\texttt{\textcolor{myred}{\# creates images of the face detected in greyscale and in color}}@> 
 		img_color = obj_videoFeed[y:y+h, x:x+w]
-		<@\texttt{\textcolor{red}{\# ive added these now to be used later when saving photos of unknown people, just for testing at the moment}}@> 
+		<@\texttt{\textcolor{myred}{\# ive added these now to be used later when saving photos of unknown people, just for testing at the moment}}@> 
 	cv2.imshow('Input feed', obj_videoFeed) 
-	<@\texttt{\textcolor{red}{\# creates a window and streams the input from the camera from the variable imgout}}@>
+	<@\texttt{\textcolor{myred}{\# creates a window and streams the input from the camera from the variable imgout}}@>
 	key_k = cv2.waitKey(10) & 0xff
-	<@\texttt{\textcolor{red}{\# continually updates the image as long as ESC isnt pressed}}@> 
+	<@\texttt{\textcolor{myred}{\# continually updates the image as long as ESC isnt pressed}}@> 
 	if key_k == 27:
-		<@\texttt{\textcolor{red}{\# if ESC pressed}}@>
+		<@\texttt{\textcolor{myred}{\# if ESC pressed}}@>
 		break
-		<@\texttt{\textcolor{red}{\# break on ESC}}@> 
+		<@\texttt{\textcolor{myred}{\# break on ESC}}@> 
 stream.release()
-<@\texttt{\textcolor{red}{\# free the camera, keep the hardware and software (mainly memory) tidy, this prevents errors with the camera being in-use whilst we try to run the code}}@> 
+<@\texttt{\textcolor{myred}{\# free the camera, keep the hardware and software (mainly memory) tidy, this prevents errors with the camera being in-use whilst we try to run the code}}@> 
 cv2.destroyAllWindows()
-<@\texttt{\textcolor{red}{\# destroy the image window}}@> 
+<@\texttt{\textcolor{myred}{\# destroy the image window}}@> 
 
 \end{lstlisting}
 When this code is ran, the following window pops up which shows the result of Haar detection.
