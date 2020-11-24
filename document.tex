@@ -889,7 +889,8 @@ On \textbf{[18]}, I define \texttt{obj\_videoFeedGray}, this uses the \texttt{.c
 	\caption{A table showing what affect each paramter has on the solution}
 	\label{tab_haarParamsExplain}
 \end{table}
-From here, \textbf{[22]} loops between all of the faces that have been detected -- \texttt{[x, y, w, h]} refers to the co-ordinate of the face and the size of each face. We can use these to draw a rectangle in \textbf{[24]} using the \texttt{cv2.rectangle()} function, this uses the co-ordinates and size outlined in the for loop to draw a bounding box around each face in a frame. In a similar fashion, crops of the photo can be taken with the co-ordinates also, this happens in \textbf{[26, 28]}. From here, the code displays the final frame in a window which updates at the rate at which new frames arrive, this can be exited with the escape key where the code then releases the device from use so that it can be used again without error.\\\\
+From here, \textbf{[22]} loops between all of the faces that have been detected -- \texttt{[x, y, w, h]} refers to the co-ordinate of the face and the size of each face. We can use these to draw a rectangle in \textbf{[24]} using the \texttt{cv2.rectangle()} function, this uses the co-ordinates and size outlined in the for loop to draw a bounding box around each face in a frame. In a similar fashion, crops of the photo can be taken with the co-ordinates also, this happens in \textbf{[26, 28]}. From here, the code displays the final frame in a window which updates at the rate at which new frames arrive, this can be exited with the escape key where the code then releases the device from use so that it can be used again without error.
+\subsubsection{Testing \& linking to success criteria}
 Comparing the code we have written to the success criteria. we can make the following observations.
 \begin{table}[H]
 	\centering
@@ -949,7 +950,7 @@ The later sections will not have all the extra padding explaining what the secti
 \newpage
 \subsection{Constructing code to take snapshots of faces in the viewport etc...}
 Following on from what we made previously in \S\ref{ssec_feed}, the most logical jump would now be to construct the code that takes care of dataset collection and management (or the fundamentals at least, which can be applied later and adapted as needed) collection\footnote{Pre-webpage functions}. \\
-This code will be similar to before, with some additions from other libraries to help me to take care of image handling from within Python. I have chosen libraries such as \texttt{pillow}\cite{} and \texttt{imutils}\cite{} to help me here, as they are well documented libraries with good documentation.
+This code will be similar to before, with some additions from other libraries to help me to take care of image handling from within Python. I have chosen libraries such as \texttt{pillow}\cite{PIL} and \texttt{imutils}\cite{imutils} to help me here, as they are well documented libraries with good documentation.
 \subsubsection{Development of code}
 I started the section by keeping the code generated before as is and attempting to simply add things to the code in order to moprh it as required. My way of saving a set number of photos of a face was to use a simple for loop (count controlled iteration) to sequentially save photos with different filenames which depend on the iterate. The pseudocode for this is as follows;
 \begin{lstlisting}
@@ -974,7 +975,122 @@ while(True):
 		<@\texttt{\textcolor{myred}{\# Take n face samples and stop the function}}@> 
 		break
 \end{lstlisting}
-The Python implementation may not be exactly as shown above, but I attempted to incorporate it here. The initial code I created can be seen in the screenshot below from the default Raspberry Python IDE 
+The Python implementation may not be exactly as shown above, but I attempted to incorporate it here. The initial code I created can be seen in the screenshot below from the default Raspberry Python IDE.
+-\\
+-\\
+-\\
+-\\
+As seen in Fig \ref{} above, there was an error encountered when running the program. This was to be expected as I wasn't confident in the functioning of the code that I had written. This is not a problem however, as we can debug as follows;
+
+
+
+
+
+\subsubsection{Dataset testing \& comparing to success criteria}
+\begin{table}[H]
+	\centering
+	\rowcolors{3}{tableShade}{white}
+	\begin{tabularx}{\textwidth}{lXXXl}
+		Test & \textbf{Test Data} & \textbf{Expected Outcome} & \textbf{Actual Outcome} & \textbf{Passed?} \\
+		\midrule
+		1    &                    &                           &                         &                  \\
+		2    &                    &                           &                         &                  \\
+		3    &                    &                           &                         &                  \\
+		4    &                    &                           &                         &                  \\
+		5    &                    &                           &                         &                  \\
+		6    &                    &                           &                         &                  \\
+		7    &                    &                           &                         &                  \\
+		\bottomrule
+	\end{tabularx}
+	\caption{A table showing the tests performed on the solution, with justification}
+	\label{tab_testingDesignSolution}
+\end{table}
+
+
+
+
+\subsubsection{Amendments, comments}
+
+
+
+
+\newpage
+\subsection{Training collected datasets into files that can be used for Facial Identification}
+\subsubsection{Devleopment of the code}
+\subsubsection{Testing \& liking to the success criteria}
+\subsubsection{Amendments}
+
+
+\subsection{Adding facial recognition capability}
+\subsubsection{Development of the code}
+\subsubsection{Testing \& liking to the success criteria}
+\subsubsection{Amendments}
+
+
+\subsection{Adding facial recognition capability}
+\subsubsection{Development of the code}
+\subsubsection{Testing \& liking to the success criteria}
+\subsubsection{Amendments}
+
+
+\subsection{Creating the web-server}
+\subsubsection{Development of the code}
+\subsubsection{Testing \& liking to the success criteria}
+\subsubsection{Amendments}
+
+
+\subsection{Linking web-server \& web-page to the previous driver code}
+\subsubsection{Development of the code}
+\subsubsection{Testing \& liking to the success criteria}
+\subsubsection{Amendments}
+
+
+\subsection{Adding interactive elements to the web-page}
+\subsubsection{Development of the code}
+\subsubsection{Testing \& liking to the success criteria}
+\subsubsection{Amendments}
+
+
+
+
+
+
+\newpage
+\subsection{Code clean-up and refactoring}
+%https://realpython.com/python-refactoring/#:~:text=Remove%20ads-,Refactoring%20in%20Python,performance%2C%20or%20reduction%20in%20complexity.
+``Refactoring is the technique of changing an application (either the code or the architecture) so that it behaves the same way on the outside, but internally has improved. These improvements can be stability, performance, or reduction in complexity.\cite{codeRefactoring}'' Refactoring our code is good practice and it brings many benefits; it will not only improve the performance and the complexity of the program, but make maintenance and open-source development easier also by laying out the code in an easier to read and more logical way.\\\\
+Refactoring will begin with the following steps
+
+\begin{itemize}
+	\item  Ensure that variable names are descriptive and consistent
+	\item  Remove constants and add more variables if needed, allowing changes from the outside world
+	\item  Break down functions if they are too big, functions should specialise with one thing
+	\item  Remove duplicated code, this adds size and complexity to the code which is dead-weight
+\end{itemize}
+
+We will measure the success of refactoring by using Key Performance  incorporating both McCabe Cyclomatic Complexity Analysis\cite{} and the Halstead Volume Measure\cite{} together on a scale called the Maintainability Index (MI) which are all explained in the equations below along with what each variable represents;\\
+
+For a given problem let:
+\begin{align*}
+	\eta_1   & = \mbox{Number of distinct operators}                    \\
+	\eta_2   & = \mbox{Number of distinct operands}                     \\
+	N_1      & = \mbox{Total number of operators}                       \\
+	N_2      & = \mbox{Total number of operands}                        \\
+	\intertext{Which can be used for the following set of equations (Taken from Halstead complexity measure)}
+	\hat {N} & =\eta _{1}\log _{2}\eta _{1}+\eta _{2}\log _{2}\eta _{2} \\
+	N        & =N_{1}+N_{2}                                             \\
+	\eta     & =\eta _{1}+\eta _{2}                                     \\
+	V        & =N \log _{2}\eta                                         \\
+	D        & ={\eta _{1} \over 2}\times {N_{2} \over \eta _{2}}       \\
+	E        & = DV                                                     \\
+	\intertext{It is the volume, $V$, that we are interested in for the maintainability index. The McCabe metric, $C$ represents the number of independent code paths in the source code which is then used along with the lines of code, $L$, in the Maintainability Index equation:}
+	\mbox{MI} & =171-5.2\ln(V)-0.23C-16.2\ln(L)
+\end{align*}
+The MI and also measurements such as (D)ifficulty and (E)ffort will be tracked as we begin to refactor our code. We can then see if we are improving the code or making it worse.
+
+\subsection{Final testing}
+
+
 
 
 

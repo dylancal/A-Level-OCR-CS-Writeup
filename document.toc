@@ -1,32 +1,61 @@
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {section}{\numberline {2}Stakeholders}{2}{section.2}%
-\contentsline {section}{\numberline {3}Research into similar problems and their solutions}{3}{section.3}%
-\contentsline {section}{\numberline {4}Limitations of my solution}{5}{section.4}%
-\contentsline {section}{\numberline {5}Applicable features for a computational solution}{6}{section.5}%
-\contentsline {section}{\numberline {6}Minimum Required Hardware and Software configuration}{6}{section.6}%
-\contentsline {section}{\numberline {7}Success Criteria}{7}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Success Criteria for the device setup}{7}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Success Criteria to ensure the enforcement of chosen programming constructs}{7}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Success Criteria for the solution}{8}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Design of the solution}{11}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Decomposition of the problem and application to the solution}{11}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}The non-web areas of the solution}{11}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}The web side of the solution}{15}{subsubsection.8.1.2}%
-\contentsline {subsubsection}{\numberline {8.1.3}Identifying key variables, objects, and data structures}{18}{subsubsection.8.1.3}%
-\contentsline {subsection}{\numberline {8.2}Describing the testing methodology}{19}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Testing the setup of the device}{19}{subsubsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2}Testing the solution}{20}{subsubsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.3}Final Testing}{23}{subsubsection.8.2.3}%
-\contentsline {section}{\numberline {9}The Iterative Development Process}{24}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{25}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV, face detection}{28}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Development of code}{28}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}Amendments}{30}{subsubsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.3}Constructing code to take snapshots of faces in the viewport etc...}{31}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}Development of code}{31}{subsubsection.9.3.1}%
-\contentsline {section}{\numberline {10}Evaluation}{32}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Describing the final product}{33}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Testing the product against our final criteria}{34}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Success of the solution}{35}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Problems I encountered and what I would do in the future}{36}{subsection.10.4}%
-\contentsline {section}{Bibliography}{37}{subsection.10.4}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Stakeholders}{3}{section.2}%
+\contentsline {section}{\numberline {3}Research into similar problems and their solutions}{4}{section.3}%
+\contentsline {section}{\numberline {4}Limitations of my solution}{6}{section.4}%
+\contentsline {section}{\numberline {5}Applicable features for a computational solution}{7}{section.5}%
+\contentsline {section}{\numberline {6}Minimum Required Hardware and Software configuration}{7}{section.6}%
+\contentsline {section}{\numberline {7}Success Criteria}{8}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Success Criteria for the device setup}{8}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Success Criteria to ensure the enforcement of chosen programming constructs}{8}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Success Criteria for the solution}{9}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Design of the solution}{12}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Decomposition of the problem and application to the solution}{12}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}The non-web areas of the solution}{12}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}The web side of the solution}{16}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}Identifying key variables, objects, and data structures}{19}{subsubsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.2}Describing the testing methodology}{20}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Testing the setup of the device}{20}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Testing the solution}{21}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Final Testing}{24}{subsubsection.8.2.3}%
+\contentsline {section}{\numberline {9}The Iterative Development Process}{25}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Setting up the Raspberry Pi}{26}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Getting a working video feed with OpenCV, face detection}{29}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Development of code}{29}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Testing \& linking to success criteria}{30}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}Amendments}{31}{subsubsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.3}Constructing code to take snapshots of faces in the viewport etc...}{32}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Development of code}{32}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Dataset testing \& comparing to success criteria}{32}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Amendments, comments}{32}{subsubsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.4}Training collected datasets into files that can be used for Facial Identification}{33}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Devleopment of the code}{33}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}Testing \& liking to the success criteria}{33}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Amendments}{33}{subsubsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.5}Adding facial recognition capability}{33}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Development of the code}{33}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}Testing \& liking to the success criteria}{33}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}Amendments}{33}{subsubsection.9.5.3}%
+\contentsline {subsection}{\numberline {9.6}Adding facial recognition capability}{33}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}Development of the code}{33}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Testing \& liking to the success criteria}{33}{subsubsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.3}Amendments}{33}{subsubsection.9.6.3}%
+\contentsline {subsection}{\numberline {9.7}Creating the web-server}{33}{subsection.9.7}%
+\contentsline {subsubsection}{\numberline {9.7.1}Development of the code}{33}{subsubsection.9.7.1}%
+\contentsline {subsubsection}{\numberline {9.7.2}Testing \& liking to the success criteria}{33}{subsubsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.3}Amendments}{33}{subsubsection.9.7.3}%
+\contentsline {subsection}{\numberline {9.8}Linking web-server \& web-page to the previous driver code}{33}{subsection.9.8}%
+\contentsline {subsubsection}{\numberline {9.8.1}Development of the code}{33}{subsubsection.9.8.1}%
+\contentsline {subsubsection}{\numberline {9.8.2}Testing \& liking to the success criteria}{33}{subsubsection.9.8.2}%
+\contentsline {subsubsection}{\numberline {9.8.3}Amendments}{33}{subsubsection.9.8.3}%
+\contentsline {subsection}{\numberline {9.9}Adding interactive elements to the web-page}{33}{subsection.9.9}%
+\contentsline {subsubsection}{\numberline {9.9.1}Development of the code}{33}{subsubsection.9.9.1}%
+\contentsline {subsubsection}{\numberline {9.9.2}Testing \& liking to the success criteria}{33}{subsubsection.9.9.2}%
+\contentsline {subsubsection}{\numberline {9.9.3}Amendments}{33}{subsubsection.9.9.3}%
+\contentsline {subsection}{\numberline {9.10}Code clean-up and refactoring}{34}{subsection.9.10}%
+\contentsline {subsection}{\numberline {9.11}Final testing}{34}{subsection.9.11}%
+\contentsline {section}{\numberline {10}Evaluation}{35}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Describing the final product}{36}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Testing the product against our final criteria}{37}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Success of the solution}{38}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Problems I encountered and what I would do in the future}{39}{subsection.10.4}%
+\contentsline {section}{Bibliography}{40}{subsection.10.4}%

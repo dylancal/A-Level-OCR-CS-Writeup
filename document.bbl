@@ -43,4 +43,16 @@ Raspberry~Pi Foundation.
 \newblock \url{https://www.raspberrypi.org/downloads/} Accessed on 21 September
   2020.
 
+\bibitem{PIL}
+Alex Clark and Contributors.
+\newblock {\em Pillow, the friendly PIL fork}.
+\newblock \url{https://github.com/python-pillow/Pillow} Accessed on 21
+  September 2020.
+
+\bibitem{imutils}
+jrosebr1.
+\newblock {\em imutils on Github}.
+\newblock \url{https://github.com/jrosebr1/imutils} Accessed on 24 September
+  2020.
+
 \end{thebibliography}
