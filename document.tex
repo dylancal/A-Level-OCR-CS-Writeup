@@ -417,7 +417,6 @@ The next part of the solution is taking the datasets of faces that we have grabb
 	\caption{A picture showing each stage of the LPBH recognition process \cite{lbphDiagram}}\label{fig_LBPH}
 \end{figure}
 This looks somewhat similar to the Haar based system. A simplified way of describing it would be that it converts an image to grayscale, splits the image into smaller 3x3 sections and then performs operations such as edge detection and more on each of those sections. The resulting middle image on Figure 6 shows the result of this LBP process. This middle image shows the features of the face in the first image. A histogram showing the number of similar LBP values in a region can be constructed and is shown on the right. This histogram describes that unique face as it can be perceived as a ‘fingerprint’ of sorts. As a result, we can identify faces from one another by comparing their LBP histograms. A table of the advantages of this algorithm are shown below.
-
 \begin{table}[H]
 	\centering
 	\begin{tabular}{@{}p{3in}p{3in}@{}}
@@ -430,7 +429,6 @@ This looks somewhat similar to the Haar based system. A simplified way of descri
 	\label{tab_lbphProCons}
 \end{table}
 The pseudocode for the logic implementing this algorithm will be something resembling the following.
-
 \begin{lstlisting}
 set datasetPath = {path_to_dataset} 
 set recogniser = {LBPH_recognizer_cv2}
@@ -451,11 +449,9 @@ set faces, ids, paths = findImagesIDs(datasetPath)
 {train recognizer} with (faces, ids) 
 {write trained recognizer} at {path_to_trained_dataset}
 \end{lstlisting}
-
 We can see that this code is much different than previously – this is since there is no input feed here as this part of the solution just uses the files already taken from the dataset constructed in the previous section of the code.
 The first step of the process are some initialisations such as the path where the images are saved; other things such as the path to the face cascade are needed also. We must also create a recogniser that can detect faces by their features. The OpenCV recogniser that we are using will be able to use IDs in order to identify a face as a person. This will then train the recogniser, and write the result of this training to a file that can be used in the identification stage later. This trained file will have the `.YAML' extension; containing `instructions' that will ensure that individual faces are recognised in the identification stage.\\
-After this, the next step is exploring the section that encompasses the identification of faces. Looking at the flowchart for this section inparticular (Figure \ref{fig_flowRecognition}), we can see a few extra sections such as the application of the Twilio API and using the trained dataset in the context of identifying faces in the frame and showing identification
- 
+After this, the next step is exploring the section that encompasses the identification of faces. Looking at the flowchart for this section in particular (Figure \ref{fig_flowRecognition}), we can see a few extra sections such as the application of the Twilio API and using the trained dataset in the context of identifying faces in the frame and showing identification
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=4.7in]{facialRecognitionIdentify.png}
@@ -487,7 +483,6 @@ while True:
 release videoFeed from {device}
 \end{lstlisting}
 The new additions in this code include the use of the Twilio API to send an SMS to a phone on the condition that there is an intruder, and the use of the \texttt{trainedFile} to recognise faces with the \texttt{\{get\_prediction\}} function (which will be implemented with the \texttt{OpenCV} library).
-
 \subsubsection{The web side of the solution} 
 The code designed previously covers the whole facial recognition section of the solution. The next stage is to construct a webpage that allows us to view the results of this facial recognition on any computer connected to the local intranet\footnote{We could also do this over the internet by using port forwarding. Doing this may add security vulnerabilities though as people may be able to hack into the system -- I would rather leave this option disabled as a default}. We must do this by incorporating the previous code into our webserver, which will be constructed with the \texttt{Flask} library in Python. \\\
 The top-level flowchart is shown on Figure \ref{fig_webserver} -- this shows the surface level logic of the way in which the webpage will funciton.
@@ -526,11 +521,8 @@ This covers most of the design of the solution. During the iterative development
 	\caption{A meme, applicable}
 	\label{fig:meme}
 \end{figure}
-
-		
 \newpage
 \subsubsection{Identifying key variables, objects, and data structures}
-
 \begin{table}[H]
 	\centering
 	\rowcolors{3}{tableShade}{white}
@@ -556,15 +548,6 @@ This covers most of the design of the solution. During the iterative development
 	\label{tab_keyItems}
 \end{table}
 In the table above, we can see the switch case and Hungarian notation at work -- these provide clarity to each and every variable used in the program. This, along with comments along the code, will make clear to others what each section of the code does.
-
-
-
-
-
-
-
-
-
 \newpage
 \subsection{Describing the testing methodology}
 \subsubsection{Testing the setup of the device}
@@ -585,7 +568,6 @@ In the table above, we can see the switch case and Hungarian notation at work --
 \end{table}
 Once these tests are complete, we can say that the device is ready to start being used to develop the solution on --  all the necessary components and dependencies are now there. The next stage is now working out a testing frame for the solution. This is a much larger task due to the scale of the solution and the immense amount of work needed to process and perform each test on each component.\\\\
 Whilst this stage of testing is not as important as the next, I have included it for absolute clarity on the setup of the device. After all, a solution can be not constructed on a device that does not work properly.
-
 \newpage
 \subsubsection{Testing the solution}
 \global\rownum=0\relax
@@ -642,17 +624,6 @@ The sub-testing for the buttons is shown in the table below
 	\caption{A table showing the tests performed to ensure buttons work as intended}\label{tab_testingDesignButtons}
 \end{tabularx}
 If all of these tests pass at the time of testing, then \textbf{(22)} can also be passed from the main testing table.\\\\
-
-
-
-
-
-
-
-
-
-
-
 \newpage
 \subsubsection{Final Testing}
 Final testing is the testing frame that will be used once we have what we think is the `final' product. This set of testing will test all functions of the program and check for any errors, logical or otherwise. It is also vital to ensure that any validation is implemented correctly -- the program needs to mitigate any mis-entry by the end-user as much as possible.
@@ -679,20 +650,6 @@ Final testing is the testing frame that will be used once we have what we think 
 	\caption{A table showing the \textbf{final} tests performed on the solution, with justification}
 	\label{tab_testingDesignSolutionFinal}
 \end{table}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \newpage
 \section{The Iterative Development Process}
 We can now begin the iterative development process; using the success criteria and the testing frames we made in the previous section, we can begin to write the code that will build the solution we planned. It is important that the code is tested along the way to ensure that each `block' of code works before pushing them all together to create a final solution.\\\\
@@ -713,17 +670,6 @@ As mentioned previously, testing will occur in each stage (independently of othe
 	\caption{A flowchart showing how the testing logic links to our development}\label{fig_flowTesting}
 \end{figure}
 On Figure \ref{fig_flowTesting}, we can see how we will perform testing at each stage. With this in mind, we can now begin the development process.
-
-
-
-
-
-
-
-
-
-
-
 \newpage
 \subsection{Setting up the Raspberry Pi}
 We begin setting up the hardware for our Raspberry Pi 3B.
@@ -806,16 +752,9 @@ With the device set-up, we can now move on to testing that is, infact, set-up co
 	\label{tab_deviceSetupTesting}
 \end{table}
 As all the tests needed for this section of construction have passed and that the success criteria governing the creation of this section has been adhered to, we can now move on to the next section of construction.
-
-
-
-
-
-
 \newpage
 \subsection{Getting a working video feed with OpenCV, face detection}\label{ssec_feed}
 For the next sections to work, we must generate some code that allows us to get a working image feed in Python. As we are using VNC and can see the desktop environment, it is sufficient to output the feed captured by OpenCV to a graphical window for now. Later on in the development after we move to the webpage, this will become deprecated and will be removed.
-
 \subsubsection{Development of code}
 I began with the following code in Python, comments are attached to the side and underneath certain lines for explanation.
 \begin{lstlisting}[language=Python]
@@ -931,7 +870,8 @@ For the thickness of the bounding box, the last parameter (1) on \texttt{[25]} w
 In terms of latency, I will be leaving this amendment until later as it is not absolutely essential -- it is also possible that changes I make would undo this amendment anyway so I will be waiting until later to try and fix the latency issues; once I have completed tests on latency after the recognition is added (this allows me to analyse the final results). \\
 Accuracy was a problem identified in \texttt{(4)}, I will complete further tests on accuracy and sustainability later as a result of picking up on this problem now. \\\\
 The later sections will not have all the extra padding explaining what the sections are about, they are only necessary in this first iteration to explain my method of writing my coursework and also the method of development. Now, only the subheadings and details are needed.
-
+\subsubsection{A note about GitHub incorporation}
+Whilst I have decided not to include GitHub incorporation evidence to the document (for size reasons), each failed test is given its own issue page on the master branch of the repository. A new branch is created for each issue and when the issue has been fixed (on secondary branch) it is committed and then merged back to the master branch of the repository via a pull request (with commit commends and code sections included). I will include one example below to show the process that each failed test goes through to show understanding and this will be repeated for every issue. I will not, however, include evidence of any subsequent cycles due to it taking up too much size in this document.
 
 
 
@@ -1050,13 +990,9 @@ As seen in Fig \ref{} above, there was an error encountered when running the pro
 \subsubsection{Testing \& liking to the success criteria}
 \subsubsection{Amendments}
 
-
-
-
-
-
 \newpage
 \subsection{Code clean-up and refactoring}
+\subsubsection{Introduction to the refactoring process}
 %https://realpython.com/python-refactoring/#:~:text=Remove%20ads-,Refactoring%20in%20Python,performance%2C%20or%20reduction%20in%20complexity.
 ``Refactoring is the technique of changing an application (either the code or the architecture) so that it behaves the same way on the outside, but internally has improved. These improvements can be stability, performance, or reduction in complexity.\cite{codeRefactoring}'' Refactoring our code is good practice and it brings many benefits; it will not only improve the performance and the complexity of the program, but make maintenance and open-source development easier also by laying out the code in an easier to read and more logical way.\\\\
 Refactoring will begin with the following steps
@@ -1068,27 +1004,51 @@ Refactoring will begin with the following steps
 	\item  Remove duplicated code, this adds size and complexity to the code which is dead-weight
 \end{itemize}
 
-We will measure the success of refactoring by using Key Performance  incorporating both McCabe Cyclomatic Complexity Analysis\cite{} and the Halstead Volume Measure\cite{} together on a scale called the Maintainability Index (MI) which are all explained in the equations below along with what each variable represents;\\
+We will measure the success of refactoring by using a key performance indicator (KPI) that incorporates both McCabe Cyclomatic Complexity Analysis\cite{} and the Halstead Volume Measure\cite{} together on a scale called the Maintainability Index (MI) which are all explained in the equations below along with what each variable represents;\\
 
 For a given problem let:
 \begin{align*}
-	\eta_1   & = \mbox{Number of distinct operators}                    \\
-	\eta_2   & = \mbox{Number of distinct operands}                     \\
-	N_1      & = \mbox{Total number of operators}                       \\
-	N_2      & = \mbox{Total number of operands}                        \\
+	\eta_1         & = \mbox{Number of distinct operators}                    \\
+	\eta_2         & = \mbox{Number of distinct operands}                     \\
+	N_1            & = \mbox{Total number of operators}                       \\
+	N_2            & = \mbox{Total number of operands}                        \\
 	\intertext{Which can be used for the following set of equations (Taken from Halstead complexity measure)}
-	\hat {N} & =\eta _{1}\log _{2}\eta _{1}+\eta _{2}\log _{2}\eta _{2} \\
-	N        & =N_{1}+N_{2}                                             \\
-	\eta     & =\eta _{1}+\eta _{2}                                     \\
-	V        & =N \log _{2}\eta                                         \\
-	D        & ={\eta _{1} \over 2}\times {N_{2} \over \eta _{2}}       \\
-	E        & = DV                                                     \\
+	\hat {N}       & =\eta _{1}\log _{2}\eta _{1}+\eta _{2}\log _{2}\eta _{2} \\
+	N              & =N_{1}+N_{2}                                             \\
+	\eta           & =\eta _{1}+\eta _{2}                                     \\
+	V\mbox{olume}  & =N \log _{2}\eta                                         \\
+	D\mbox{ensity} & = \frac{\eta_1 \cdot N_2}{2\eta_2}                       \\
+	E\mbox{ffort}  & = DV                                                     \\
 	\intertext{It is the volume, $V$, that we are interested in for the maintainability index. The McCabe metric, $C$ represents the number of independent code paths in the source code which is then used along with the lines of code, $L$, in the Maintainability Index equation:}
-	\mbox{MI} & =171-5.2\ln(V)-0.23C-16.2\ln(L)
+	\mbox{MI}      & =171-5.2\ln(V)-0.23(C)-16.2\ln(L)
 \end{align*}
 The MI and also measurements such as (D)ifficulty and (E)ffort will be tracked as we begin to refactor our code. We can then see if we are improving the code or making it worse.
 
-\subsection{Final testing}
+
+\subsubsection{Evidence of refactoring}
+We will now start the refactoring process using the points that we collected in the previous section
+
+\subsubsection{Refactoring tests}
+We can find out code metrics in Python 3 with the \texttt{radon} library. This can calculate both the McCabe metric and the volume of the code. Data taken from the start and throughout each step of the refactoring process can be collected to allow us to see how we are improving the code over the time. It is important to note that numbers aren't everything however -- not every change is reflected by a change in the metrics and quality of life improvements may be as simple as changing the name of a variable (which isn't reflected by any metrics).\\\\
+The data from each step of the refactoring process was imported into the \texttt{R} programming language. Plots were created with \texttt{ggplot2} from the \texttt{tidyverse} set of packages. They can be seen in the figures below.
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Final testing}
+Now that we have 'finished' developing and amending the code, there is one more set of tests that we must do in order to asses the usability of the product. These final sets of tests will guarantee that all uses of the product are possible and the expected outputs are seen every time that the program is ran. As well as using a testing frame, I will be developing case studies by giving a few stakeholders scenarios to run through as if they were the final end user. This is helpful as it helps to assess real-world use in a way that in-house testing simply can not. In a way, the stakeholders are acting as beta-testers as they are secondary to the alpha testing done by myself.
+
+
+
+
+
 
 
 
@@ -1099,38 +1059,28 @@ The MI and also measurements such as (D)ifficulty and (E)ffort will be tracked a
 
 \newpage
 \section{Evaluation}
-Now that our solution is complete, we may look back at our original success criteria one final time -- comparing our previous idea to the final product and how it performed in tests.\\\\
-As shown by the results here, we have kept to the success criteria mostly as expected. Times that we did not keep to the success criteria were few compared to how well we kept to it. In the main, any breaches of criteria were amended and it was very rare to be not at all close to how we intended.
+Now that our solution is complete, we may look back at our original success criteria one final time -- comparing our previous idea to the final product and how it performed in tests. This section is all about looking at what we have done and commenting on factors such as success and sustainability.
 
-
-\newpage
 \subsection{Describing the final product}
+The final product is very similar to what I set out to achieve. It is a system hosted on a Raspberry Pi that acts as a visual security monitor for a certain premises. There is an IR-enabled camera connected to the Pi which scans the world around it. Using OpenCV, the product scans the area for faces and checks if they are enrolled in a database, people can be entered into this database either by physical enrolment or via a webpage (control panel).\\
+The control panel is hosted on the Pi itself and acts as the actual monitoring portion of the product. On the webpage we can see the incomig feed along with any face detections at the time (noted by a bounding box around the faces). As well as this, the name of the person (predicted by OpenCV) is displayed underneath the bounding box if the person is recognised as being in the database, the name is unknown otherwise.\\
+As well as this, there is a confidence by the name also, allowing us to see the predicted accuracy of the trained model. The webpage contains buttons also which allow us to take screenshots, view screenshots and control things such as the Twilio incorporation.\\
+The Twilio element is optional and allows us to send an SMS to a chosen person if someone unknown is detected by the camera.
 
+\subsection{Formally testing the product against our initial criteria}\label{ssc_testingFinal}
+Testing against the initial criteria lets us see exactly how close we were to the original design. I compared the product against the initial criteria and graded each pass as a positive point and each fail as a negative point. This can be then converted to a percentage to see how we did compared to what we set out to achieve.
 
-\newpage
-\subsection{Testing the product against our final criteria}\label{ssc_testingFinal}
-
-
-
-
-\newpage
 \subsection{Success of the solution}
-We can assess to a point the success of the solution by comparing the results from \ref{ssc_testingFinal}
+We can assess to a point the success of the solution by looking at the test results from \ref{} and also the percentage from \ref{} and seeing how we did.
 
-
-
-\newpage
 \subsection{Problems I encountered and what I would do in the future}
 
+\subsection{Potential future changes}
 
 
-
-
-
-
-
-
-
+\subsection{Comments on the sustainability of the product}
+Originally, the final code was not very sustainable as it was too linear in some parts. As well as this, some parts of the code weren't very easy to read which would make future updates and bug fixes difficult to do. However, thanks to the refactoring, our code is very easy to read with many comments to explain each section. This would make open-source development a possibility as the code is already on GitHub and it is easy to understand due to the inline explanation.\\\\
+Despite efforts to make future improvements easier, there is no update functionality in the product itself -- the version that the end-user buys will be the only version that they have access to. Due to this, it would have been useful (in retrospect) to add code that could download a new version from the repository and then overwrite itself with this new version. This would not be too difficult to implement and would improve the quality of life for the end user in the case that any bugs appear. 
 
 \newpage
 \addcontentsline{toc}{section}{Bibliography}

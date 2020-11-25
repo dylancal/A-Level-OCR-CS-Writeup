@@ -23,39 +23,45 @@
 \BOOKMARK [3][-]{subsubsection.9.2.1}{Development of code}{subsection.9.2}% 23
 \BOOKMARK [3][-]{subsubsection.9.2.2}{Testing \046 linking to success criteria}{subsection.9.2}% 24
 \BOOKMARK [3][-]{subsubsection.9.2.3}{Amendments}{subsection.9.2}% 25
-\BOOKMARK [2][-]{subsection.9.3}{Constructing code to take snapshots of faces in the viewport etc...}{section.9}% 26
-\BOOKMARK [3][-]{subsubsection.9.3.1}{Development of code}{subsection.9.3}% 27
-\BOOKMARK [3][-]{subsubsection.9.3.2}{Dataset testing \046 comparing to success criteria}{subsection.9.3}% 28
-\BOOKMARK [3][-]{subsubsection.9.3.3}{Amendments, comments}{subsection.9.3}% 29
-\BOOKMARK [2][-]{subsection.9.4}{Training collected datasets into files that can be used for Facial Identification}{section.9}% 30
-\BOOKMARK [3][-]{subsubsection.9.4.1}{Devleopment of the code}{subsection.9.4}% 31
-\BOOKMARK [3][-]{subsubsection.9.4.2}{Testing \046 liking to the success criteria}{subsection.9.4}% 32
-\BOOKMARK [3][-]{subsubsection.9.4.3}{Amendments}{subsection.9.4}% 33
-\BOOKMARK [2][-]{subsection.9.5}{Adding facial recognition capability}{section.9}% 34
-\BOOKMARK [3][-]{subsubsection.9.5.1}{Development of the code}{subsection.9.5}% 35
-\BOOKMARK [3][-]{subsubsection.9.5.2}{Testing \046 liking to the success criteria}{subsection.9.5}% 36
-\BOOKMARK [3][-]{subsubsection.9.5.3}{Amendments}{subsection.9.5}% 37
-\BOOKMARK [2][-]{subsection.9.6}{Adding facial recognition capability}{section.9}% 38
-\BOOKMARK [3][-]{subsubsection.9.6.1}{Development of the code}{subsection.9.6}% 39
-\BOOKMARK [3][-]{subsubsection.9.6.2}{Testing \046 liking to the success criteria}{subsection.9.6}% 40
-\BOOKMARK [3][-]{subsubsection.9.6.3}{Amendments}{subsection.9.6}% 41
-\BOOKMARK [2][-]{subsection.9.7}{Creating the web-server}{section.9}% 42
-\BOOKMARK [3][-]{subsubsection.9.7.1}{Development of the code}{subsection.9.7}% 43
-\BOOKMARK [3][-]{subsubsection.9.7.2}{Testing \046 liking to the success criteria}{subsection.9.7}% 44
-\BOOKMARK [3][-]{subsubsection.9.7.3}{Amendments}{subsection.9.7}% 45
-\BOOKMARK [2][-]{subsection.9.8}{Linking web-server \046 web-page to the previous driver code}{section.9}% 46
-\BOOKMARK [3][-]{subsubsection.9.8.1}{Development of the code}{subsection.9.8}% 47
-\BOOKMARK [3][-]{subsubsection.9.8.2}{Testing \046 liking to the success criteria}{subsection.9.8}% 48
-\BOOKMARK [3][-]{subsubsection.9.8.3}{Amendments}{subsection.9.8}% 49
-\BOOKMARK [2][-]{subsection.9.9}{Adding interactive elements to the web-page}{section.9}% 50
-\BOOKMARK [3][-]{subsubsection.9.9.1}{Development of the code}{subsection.9.9}% 51
-\BOOKMARK [3][-]{subsubsection.9.9.2}{Testing \046 liking to the success criteria}{subsection.9.9}% 52
-\BOOKMARK [3][-]{subsubsection.9.9.3}{Amendments}{subsection.9.9}% 53
-\BOOKMARK [2][-]{subsection.9.10}{Code clean-up and refactoring}{section.9}% 54
-\BOOKMARK [2][-]{subsection.9.11}{Final testing}{section.9}% 55
-\BOOKMARK [1][-]{section.10}{Evaluation}{}% 56
-\BOOKMARK [2][-]{subsection.10.1}{Describing the final product}{section.10}% 57
-\BOOKMARK [2][-]{subsection.10.2}{Testing the product against our final criteria}{section.10}% 58
-\BOOKMARK [2][-]{subsection.10.3}{Success of the solution}{section.10}% 59
-\BOOKMARK [2][-]{subsection.10.4}{Problems I encountered and what I would do in the future}{section.10}% 60
-\BOOKMARK [1][-]{subsection.10.4}{Bibliography}{}% 61
+\BOOKMARK [3][-]{subsubsection.9.2.4}{A note about GitHub incorporation}{subsection.9.2}% 26
+\BOOKMARK [2][-]{subsection.9.3}{Constructing code to take snapshots of faces in the viewport etc...}{section.9}% 27
+\BOOKMARK [3][-]{subsubsection.9.3.1}{Development of code}{subsection.9.3}% 28
+\BOOKMARK [3][-]{subsubsection.9.3.2}{Dataset testing \046 comparing to success criteria}{subsection.9.3}% 29
+\BOOKMARK [3][-]{subsubsection.9.3.3}{Amendments, comments}{subsection.9.3}% 30
+\BOOKMARK [2][-]{subsection.9.4}{Training collected datasets into files that can be used for Facial Identification}{section.9}% 31
+\BOOKMARK [3][-]{subsubsection.9.4.1}{Devleopment of the code}{subsection.9.4}% 32
+\BOOKMARK [3][-]{subsubsection.9.4.2}{Testing \046 liking to the success criteria}{subsection.9.4}% 33
+\BOOKMARK [3][-]{subsubsection.9.4.3}{Amendments}{subsection.9.4}% 34
+\BOOKMARK [2][-]{subsection.9.5}{Adding facial recognition capability}{section.9}% 35
+\BOOKMARK [3][-]{subsubsection.9.5.1}{Development of the code}{subsection.9.5}% 36
+\BOOKMARK [3][-]{subsubsection.9.5.2}{Testing \046 liking to the success criteria}{subsection.9.5}% 37
+\BOOKMARK [3][-]{subsubsection.9.5.3}{Amendments}{subsection.9.5}% 38
+\BOOKMARK [2][-]{subsection.9.6}{Adding facial recognition capability}{section.9}% 39
+\BOOKMARK [3][-]{subsubsection.9.6.1}{Development of the code}{subsection.9.6}% 40
+\BOOKMARK [3][-]{subsubsection.9.6.2}{Testing \046 liking to the success criteria}{subsection.9.6}% 41
+\BOOKMARK [3][-]{subsubsection.9.6.3}{Amendments}{subsection.9.6}% 42
+\BOOKMARK [2][-]{subsection.9.7}{Creating the web-server}{section.9}% 43
+\BOOKMARK [3][-]{subsubsection.9.7.1}{Development of the code}{subsection.9.7}% 44
+\BOOKMARK [3][-]{subsubsection.9.7.2}{Testing \046 liking to the success criteria}{subsection.9.7}% 45
+\BOOKMARK [3][-]{subsubsection.9.7.3}{Amendments}{subsection.9.7}% 46
+\BOOKMARK [2][-]{subsection.9.8}{Linking web-server \046 web-page to the previous driver code}{section.9}% 47
+\BOOKMARK [3][-]{subsubsection.9.8.1}{Development of the code}{subsection.9.8}% 48
+\BOOKMARK [3][-]{subsubsection.9.8.2}{Testing \046 liking to the success criteria}{subsection.9.8}% 49
+\BOOKMARK [3][-]{subsubsection.9.8.3}{Amendments}{subsection.9.8}% 50
+\BOOKMARK [2][-]{subsection.9.9}{Adding interactive elements to the web-page}{section.9}% 51
+\BOOKMARK [3][-]{subsubsection.9.9.1}{Development of the code}{subsection.9.9}% 52
+\BOOKMARK [3][-]{subsubsection.9.9.2}{Testing \046 liking to the success criteria}{subsection.9.9}% 53
+\BOOKMARK [3][-]{subsubsection.9.9.3}{Amendments}{subsection.9.9}% 54
+\BOOKMARK [2][-]{subsection.9.10}{Code clean-up and refactoring}{section.9}% 55
+\BOOKMARK [3][-]{subsubsection.9.10.1}{Introduction to the refactoring process}{subsection.9.10}% 56
+\BOOKMARK [3][-]{subsubsection.9.10.2}{Evidence of refactoring}{subsection.9.10}% 57
+\BOOKMARK [3][-]{subsubsection.9.10.3}{Refactoring tests}{subsection.9.10}% 58
+\BOOKMARK [1][-]{section.10}{Final testing}{}% 59
+\BOOKMARK [1][-]{section.11}{Evaluation}{}% 60
+\BOOKMARK [2][-]{subsection.11.1}{Describing the final product}{section.11}% 61
+\BOOKMARK [2][-]{subsection.11.2}{Formally testing the product against our initial criteria}{section.11}% 62
+\BOOKMARK [2][-]{subsection.11.3}{Success of the solution}{section.11}% 63
+\BOOKMARK [2][-]{subsection.11.4}{Problems I encountered and what I would do in the future}{section.11}% 64
+\BOOKMARK [2][-]{subsection.11.5}{Potential future changes}{section.11}% 65
+\BOOKMARK [2][-]{subsection.11.6}{Comments on the sustainability of the product}{section.11}% 66
+\BOOKMARK [1][-]{subsection.11.6}{Bibliography}{}% 67
