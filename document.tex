@@ -13,7 +13,7 @@
 \setlength{\parindent}{0pt}
 \usepackage[table]{xcolor}
 \definecolor{myred}{RGB}{144,12,63}
-\definecolor{tableShade}{gray}{0.95}
+\definecolor{tableShade}{gray}{0.9}
 \usepackage[bottom]{footmisc}
 \usepackage{amssymb}
 \usepackage{url}
@@ -526,9 +526,10 @@ This covers most of the design of the solution. During the iterative development
 \subsubsection{Identifying key variables, objects, and data structures}
 \begin{table}[H]
 	\centering
+	
 	\rowcolors{3}{tableShade}{white}
 	\begin{tabularx}{\textwidth}{llXX}
-		\textbf{Variable Name} & \textbf{Data Type} & \textbf{Use of the Variable}                                                                                                                      & \textbf{Validation Needed (If Applicable)}                                                                           \\ \midrule
+		\global\rownum=0\relax\textbf{Variable Name} & \textbf{Data Type} & \textbf{Use of the Variable}                                                                                                                      & \textbf{Validation Needed (If Applicable)}                                                                           \\ \midrule
 		str\_cascadePath       & VAR String         & Stores the path of the Haar Cascade used for recognising a face                                                                                   & No validation needed (Developer)                                                                                     \\
 		str\_datasetPath       & VAR String         & The path to the dataset that stores the faces                                                                                                     & No validation needed (Developer)                                                                                     \\
 		str\_recogniserPath    & VAR String         & The path to the trained file that contains the instructions for recognising faces                                                                 & No validation needed (Developer)                                                                                     \\
@@ -554,10 +555,10 @@ In the table above, we can see the switch case and Hungarian notation at work --
 \subsubsection{Testing the setup of the device}
 \begin{table}[H]
 	\centering
-	\rowcolors{3}{tableShade}{white}
+	\rowcolors{0}{white}{tableShade} 
 	\begin{tabularx}{\textwidth}{lXlXX}
-		\textbf{Test} & \textbf{Test Data}                                                        & \textbf{Test Type} & \textbf{Test Reason}                                                                                                               & \textbf{Expected Outcome}                                      \\ \midrule
-		1             & Ensure that the Pi receives power and can boot into the OS on the SD card & Normal             & The soution will be deployed on a raspberry Pi, the Pi therefore needs to be working                                               & The Pi should boot into the OS on the SD card                  \\
+		\global\rownum=0\relax \textbf{Test} & \textbf{Test Data}                                                        & \textbf{Test Type} & \textbf{Test Reason}                                                                                                               & \textbf{Expected Outcome}                                      \\ \midrule
+		\global\rownum=0\relax 1             & Ensure that the Pi receives power and can boot into the OS on the SD card & Normal             & The soution will be deployed on a raspberry Pi, the Pi therefore needs to be working                                               & The Pi should boot into the OS on the SD card                  \\
 		2             & Ensure that the SSH connection works                                      & Normal             & We will be accessing the Pi through SSH as that allows for more usability (less cables due to headless setup)                      & SSH works correctly and the Pi can connect to PC through PuTTY \\
 		3             & Ensure that the Pi VNC server works correctly and that the PC can connect & Normal             & VNC allows us to see the desktop environment from the Pi on our PC -- once again for usability reasons                             & The VNC sever works correctly and we can connect from our PC   \\
 		4             & Ensure that Python is updated to the latest version                       & Normal             & This ensures the highest compatibility with bug fixes etc                                                                          & The Python installation is of the latest version               \\
@@ -628,12 +629,13 @@ If all of these tests pass at the time of testing, then \textbf{(22)} can also b
 \newpage
 \subsubsection{Final Testing}
 Final testing is the testing frame that will be used once we have what we think is the `final' product. This set of testing will test all functions of the program and check for any errors, logical or otherwise. It is also vital to ensure that any validation is implemented correctly -- the program needs to mitigate any mis-entry by the end-user as much as possible.
+\global\rownum=1
 \begin{table}[H]
 	\centering
-	\rowcolors{3}{tableShade}{white}
+	\rowcolors{1}{white}{tableShade}
 	\begin{tabularx}{\textwidth}{lXlXX}
-		\textbf{Test} \verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}      \\ \midrule
-		1   &  &  &  & \\
+		\global\rownum=0\relax \textbf{Test} \verb|#| & \textbf{Test Data}            & \textbf{Test Type} & \textbf{Test Reason}           & \textbf{Expected Outcome}       \\ \midrule
+		\global\rownum=0\relax 1   &  &  &  & \\
 		2   &  &  &  & \\
 		3   &  &  &  & \\
 		4   &  &  &  & \\
@@ -728,8 +730,8 @@ Swap:         		1023    0     	1023	----	----	----
 ----------------------------------------------------------------------------
 \end{lstlisting}
 After we open up the file with \texttt{nano}, we must change the line \texttt{CONF\_SWAPSIZE=100} to \texttt{CONF\_SWAPSIZE=1024}
-The \texttt{free -m} command gives us a rundown of memory usage on our system. If the total swapdisk size is what we set the new size as, then the swapdisk size change worked as needed in Criterion 4($ \alpha $)\\\\
-Criterion 5($ \alpha $) governs what software we need on our system. Most importantly for the solution, we need a relatively new version of Python 3.x.x which is also compatible with OpenCV. The latest version of Python on the website is listed as XXXXXXXXXXX and we need at least XXXXXXXXXXXXX for OpenCV to work. \\
+The \texttt{free -m} command gives us a rundown of memory usage on our system. If the total swapdisk size is what we set the new size as, then the swap-disk size change worked as needed in Criterion 4($ \alpha $)\\\\
+Criterion 5($ \alpha $) governs what software we need on our system. Most importantly for the solution, we need a relatively new version of Python 3.x.x which is also compatible with OpenCV. The Python we have installed is 3.7.3 and we have version 4.1.0 of OpenCV, which is compatible.\\
 As a precautionary measure, I ran the following commands to ensure everything else on the system was up to date. These commands should also update Python as it is pre-installed on the system.
 \begin{lstlisting}
 sudo apt-get update				# to update the package information from registered sources
@@ -739,14 +741,15 @@ This ties in nicely with Criterion 5($ \alpha $) as to move on, we now need to i
 With the device set-up, we can now move on to testing that is, infact, set-up correctly. We can do this by comparing the expected outcome of the corresponding testing harness table made previously, to the actual results of testing.
 \begin{table}[H]
 	\centering
-	\rowcolors{3}{tableShade}{white}
+	\rowcolors{0}{white}{tableShade}
+	\global\rownum=0\relax
 	\begin{tabularx}{\textwidth}{lXXXl}
-		\textbf{Test} & \textbf{Test Data}                                                                               & \textbf{Expected Outcome}                                                 & \textbf{Actual Outcome}                                                                       & \textbf{Passed?} \\ \midrule
+			\global\rownum=0\relax\textbf{Test} & \textbf{Test Data}                                                                               & \textbf{Expected Outcome}                                                 & \textbf{Actual Outcome}                                                                       & \textbf{Passed?} \\ \midrule
 		1             & Adding power and watching for the LED lights on the board to indicate a successful boot sequence & The Pi should boot into the OS on the SD card                             & The Pi boots into the OS loaded on to the SD card. This is verifiable by SSH in the next test & YES              \\
 		2             & Attempting to connect to the Pi via SSH with its IP address and default credentials            & We should get a terminal on our desktop which allows us to control the Pi & We are given a terminal and are free do perform any commands as you would on the Pi itself    & YES              \\
 		3             & Attempt to connect to VNC server via IP address and default credentials & The VNC sever works correctly and we can connect from our PC, showing a desktop environment
 & The client connects via VNC and we are successful in having a desktop environment & YES \\
-		4             & Running \texttt{Python} in the terminal to aquire the version number & The version matches a release within the last 6 months & The version was XXXXXXXXXX, which is XXXXX months old & YES \\
+		4             & Running \texttt{Python} in the terminal to aquire the version number & The version matches a release within the last 6 months & The version was 3.7.4, which is new enough to be compatible with what we need & YES \\
 		5             & Using the command \texttt{pip freeze} to view currently installed packages and their version & The version is less than 3 months old & The version was less than 3 months old & YES \\ \bottomrule
 	\end{tabularx}
 	\caption{A table showing the tests performed on the device setup, the result of the test, and success/failure}
@@ -789,7 +792,7 @@ while True:
 		<@\texttt{\textcolor{myred}{\# creates images of the face detected in greyscale and in color}}@> 
 		img_color = obj_videoFeed[y:y+h, x:x+w]
 		<@\texttt{\textcolor{myred}{\# ive added these now to be used later when saving photos of unknown people, just for testing at the moment}}@> 
-	cv2.imshow('Input feed', obj_videoFeed) 
+	cv2.imshow('camera', obj_videoFeed) 
 	<@\texttt{\textcolor{myred}{\# creates a window and streams the input from the camera from the variable imgout}}@>
 	key_k = cv2.waitKey(10) & 0xff
 	<@\texttt{\textcolor{myred}{\# continually updates the image as long as ESC isnt pressed}}@> 
@@ -804,12 +807,13 @@ cv2.destroyAllWindows()
 
 \end{lstlisting}
 When this code is ran, the following window pops up which shows the result of Haar detection.
-\\
----\\
----\\
----\\
----\\
----\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3in]{figs/camTestOutput}
+	\caption{The window showing Haar detection working}
+	\label{fig:camtestoutput}
+\end{figure}
+
 I will now explain what the code does in more detail than the comments allow.\\
 Starting on \textbf{[1]}, we import the OpenCV library. This is a necessary step in order to access the OpenCV functions and objects. We then move on to \textbf{[3]}, where we store the path to the downloaded Haar cascade for detecting faces to a variable for easy re-use; this links straight to \textbf{[5]} where we create a classifier object with OpenCV by using the Haar cascade we mentioned before. With this object, we can call functions that use the Haar cascade.\\
 On \textbf{[7, 9, 10]} we first define the \texttt{obj\_stream} variable and then set parameters. The choice of width and height parameters will affect the performance and detail of the resulting images -- higher resolutions provide much more clarity but are harder to work with and will produce a video stream with a lower fps. I think 600p is a good balance between quality and performance on a device such as the Pi. Although this will be tested at other resolutions later.\\\\
@@ -867,7 +871,13 @@ The testing for this section is outlined below
 \end{table}
 \subsubsection{Amendments}
 Following the previous testing and the comparison to the success criteria, we can attempt to make amendments to the code in order to improve and get back to what the original solution indented. This is an example of us following an iterative development process and improving on what we just constructed. \\\\
-For the thickness of the bounding box, the last parameter (1) on \texttt{[25]} was changed to (2) to  have the box drawn as two pixels thick. As well as this, the \texttt{RGB} value was changed from \texttt{(0,0,0)} to \texttt{(255, 255, 255)} as this makes the box easier to see.\\
+For the thickness of the bounding box, the last parameter (1) on \texttt{[25]} was changed to (2) to  have the box drawn as two pixels thick. As well as this, the \texttt{RGB} value was changed from \texttt{(0,0,0)} to \texttt{(0, 255, 0)} as this makes the box easier to see.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3in]{figs/camTestOutputAmended}
+	\caption{The window showing the amended bounding box}
+	\label{fig:camtestoutput}
+\end{figure}
 In terms of latency, I will be leaving this amendment until later as it is not absolutely essential -- it is also possible that changes I make would undo this amendment anyway so I will be waiting until later to try and fix the latency issues; once I have completed tests on latency after the recognition is added (this allows me to analyse the final results). \\
 Accuracy was a problem identified in \texttt{(4)}, I will complete further tests on accuracy and sustainability later as a result of picking up on this problem now. \\\\
 The later sections will not have all the extra padding explaining what the sections are about, they are only necessary in this first iteration to explain my method of writing my coursework and also the method of development. Now, only the subheadings and details are needed.
